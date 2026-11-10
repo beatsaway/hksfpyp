@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>香港創科展 2026-2027｜小學組題目研究簡報（ELCHK LUAC）</title>
+<style>
+:root{
+  --bg:#f3efe6;
+  --bg2:#e7eef0;
+  --ink:#1c2a2e;
+  --muted:#4a5c62;
+  --card:#fffdf8;
+  --line:#c9d3d6;
+  --accent:#0f6a6a;
+  --accent2:#c45c26;
+  --ok:#1f6b3a;
+  --warn:#8a5a00;
+  --chip:#dce8e8;
+  --shadow:0 10px 30px rgba(28,42,46,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:"Avenir Next","Segoe UI","PingFang TC","Noto Sans TC","Helvetica Neue",sans-serif;
+  line-height:1.55;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #d7ebea 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #f7e2d3 0%, transparent 50%),
+    linear-gradient(180deg, var(--bg), var(--bg2) 40%, #eef3f1 100%);
+}
+body:before{
+  content:"";
+  position:fixed; inset:0; pointer-events:none; opacity:.35;
+  background-image:linear-gradient(rgba(15,106,106,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,106,106,.04) 1px, transparent 1px);
+  background-size:28px 28px;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px;position:relative}
+header.hero{
+  padding:28px 0 18px;
+  border-bottom:1px solid var(--line);
+  margin-bottom:28px;
+}
+.brand{
+  font-family:Georgia,"Songti TC","Noto Serif TC",serif;
+  font-size:clamp(1.8rem,4vw,2.6rem);
+  letter-spacing:.02em;
+  margin:0 0 .35rem;
+  color:var(--accent);
+}
+.sub{color:var(--muted);max-width:46rem;margin:0 0 1rem}
+.meta{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{
+  background:var(--chip);color:var(--ink);border:1px solid var(--line);
+  border-radius:999px;padding:.25rem .7rem;font-size:.85rem;
+}
+nav.toc{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:.6rem;margin:1.2rem 0 0;
+}
+nav.toc a{
+  text-decoration:none;color:var(--ink);background:var(--card);
+  border:1px solid var(--line);padding:.7rem .85rem;border-radius:10px;
+  box-shadow:var(--shadow);font-size:.92rem;
+}
+nav.toc a:hover{border-color:var(--accent);color:var(--accent)}
+section{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:1.25rem 1.25rem 1.4rem;margin:1.1rem 0;box-shadow:var(--shadow);
+}
+h2{
+  font-family:Georgia,"Songti TC","Noto Serif TC",serif;
+  margin:0 0 .8rem;font-size:1.45rem;color:var(--accent);
+  border-bottom:2px solid #b7d4d4;padding-bottom:.35rem;
+}
+h3{margin:1.1rem 0 .4rem;font-size:1.08rem}
+p,li{color:var(--ink)}
+.muted{color:var(--muted)}
+.grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
+@media(max-width:800px){.grid-2{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{border:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top}
+th{background:#e8f2f2}
+.callout{
+  background:linear-gradient(135deg,#e8f6f4,#fff8f1);
+  border-left:4px solid var(--accent2);
+  padding:.9rem 1rem;border-radius:0 12px 12px 0;margin:.8rem 0;
+}
+.callout strong{color:var(--accent2)}
+.verdict{
+  background:#12363a;color:#f4fffd;border-radius:14px;padding:1rem 1.1rem;margin:.8rem 0;
+}
+.verdict h3{color:#9de0d8;margin-top:0}
+.rec{
+  border:1px solid var(--line);border-radius:12px;padding:1rem;margin:.8rem 0;
+  background:linear-gradient(180deg,#fffefb,#f3f8f8);
+}
+.rec h3{margin-top:0;color:var(--accent)}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:.25rem .7rem;font-size:.92rem}
+.kv b{color:var(--muted);font-weight:600}
+.video{
+  border-top:1px dashed var(--line);padding:1rem 0 .4rem;
+}
+.video:first-of-type{border-top:0}
+.video h3{margin:0 0 .35rem;font-size:1.02rem}
+.video a{color:var(--accent);word-break:break-all}
+.badge{
+  display:inline-block;font-size:.75rem;padding:.15rem .45rem;border-radius:6px;
+  border:1px solid var(--line);margin-right:.35rem;background:#f0f6f6;
+}
+.badge.tx{background:#e4f5ea;border-color:#b7dfc2;color:var(--ok)}
+.badge.no{background:#fff4df;border-color:#efd29a;color:var(--warn)}
+.badge.press{background:#e8eefc;border-color:#c3d0f5;color:#27408b}
+footer{margin-top:2rem;color:var(--muted);font-size:.85rem}
+.small{font-size:.88rem}
+details{margin:.4rem 0}
+summary{cursor:pointer;color:var(--accent);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <p class="chip">Hong Kong Science Fair 2026–2027 · Primary Division</p>
+  <h1 class="brand">香港創科展題目研究簡報</h1>
+  <p class="sub">給基督教香港信義會呂祥光中學附屬小學（ELCHK LUAC）小學組隊伍：以 2025–2026 小學組入圍短片為靈感庫，對照 2026–2027 規則，評估 micro:bit 遊戲／App 控制器技能可否參賽，並提出可落地題目建議。</p>
+  <div class="meta">
+    <span class="chip">Playlist：43 videos</span>
+    <span class="chip">Usable captions：20/43</span>
+    <span class="chip">Stage 1：29 Nov 2026</span>
+    <span class="chip">Stage 2：28 Feb 2027</span>
+  </div>
+  <nav class="toc" aria-label="Sections">
+    <a href="#context">1. 比賽背景 Competition</a>
+    <a href="#microbit">2. micro:bit 適配性</a>
+    <a href="#recs">3. 本年推薦題目</a>
+    <a href="#form">4. 報名表格提示</a>
+    <a href="#playlist">5. 短片靈感庫</a>
+  </nav>
+</header>
+
+<section id="context">
+  <h2>1. 小學組比賽背景｜Primary Division context (2026–2027)</h2>
+  <div class="grid-2">
+    <div>
+      <h3>資格 Eligibility</h3>
+      <ul>
+        <li>對象：小學 <b>P4–P6</b>（小四至小六）隊伍。</li>
+        <li>期望交出解決真實生活／社區問題的創科方案，通常包含可展示的原型、研究過程與影響說明——不只是概念海報或純娛樂作品。</li>
+      </ul>
+      <h3>主題 Themes</h3>
+      <ul>
+        <li>Smart Living 智慧生活</li>
+        <li>Education 教育</li>
+        <li>Medical &amp; Healthcare 醫療及保健</li>
+        <li>Smart City 智慧城市</li>
+        <li>Sustainability 可持續發展</li>
+        <li>Creative Solutions 創意思維／創意方案</li>
+      </ul>
+      <h3>時間線 Key dates</h3>
+      <ul>
+        <li><b>Stage 1 報名／申請</b>：on or before <b>29 Nov 2026</b></li>
+        <li><b>Stage 2 項目提交</b>：on or before <b>28 Feb 2027</b></li>
+      </ul>
+    </div>
+    <div>
+      <h3>小學組評分比重 Judging (Primary)</h3>
+      <table>
+        <thead><tr><th>準則 Criterion</th><th>比重</th></tr></thead>
+        <tbody>
+          <tr><td>Problem 問題定義</td><td>20%</td></tr>
+          <tr><td>Creativity 創意</td><td>30%</td></tr>
+          <tr><td>Design &amp; Validation 設計與驗證</td><td>20%</td></tr>
+          <tr><td>Benefits 效益／受惠</td><td>20%</td></tr>
+          <tr><td>Presentation 匯報</td><td>10%</td></tr>
+        </tbody>
+      </table>
+      <p class="small muted">啟示：創意分最高，但「問題＋驗證＋受惠」合計 60%。純玩樂遊戲若欠真實問題與驗證，很難入圍。</p>
+    </div>
+  </div>
+  <div class="callout">
+    <strong>上年小學組短片告訴我們什麼？</strong>
+    入圍作品幾乎都扣住「真實用家＋可演示原型」：長者跌倒／肌少症、火警逃生、泊車流轉、書包過重、回收分類、樹木傾倒預警等。金獎「街泊路路通」與銅獎「書包 Idol」都強調反覆測試與改良；「握住健康」證明 <b>micro:bit + 遊戲化</b> 可以很有競爭力——前提是服務真實健康需要。
+  </div>
+</section>
+
+<section id="microbit">
+  <h2>2. micro:bit 遊戲／App 技能適配嗎？｜Honest fit check</h2>
+  <div class="verdict">
+    <h3>簡答 Short answer</h3>
+    <p><b>可以相容，但不是「做一款好玩遊戲就夠」。Compatible — if reframed.</b></p>
+    <p>香港創科展小學組期望看到：硬體原型（hardware prototype）、以人為本的真實問題、研究與驗證、以及對受惠者的效益。純「為好玩而做的遊戲／App」通常不夠；但若用 micro:bit 作控制器／感應器，把遊戲化當成解決社區需要的手段（如肌力訓練、坐姿矯正、復康依從、逃生演練、回收學習），則與評分高度契合。上年「握住健康」正是 micro:bit → Scratch 遊戲服務長者肌少症的成功例子。</p>
+  </div>
+  <h3>如何把現有技能映射到比賽 How to map your skills</h3>
+  <table>
+    <thead><tr><th>你們已有的技能</th><th>比賽需要的升級</th></tr></thead>
+    <tbody>
+      <tr><td>micro:bit 作遊戲手掣／按鈕／加速度感應</td><td>接到真實傳感器場景（握力、坐姿、距離、傾側、按鈕急救）並做成可展示原型</td></tr>
+      <tr><td>Scratch／MakeCode App 關卡、計分、回饋</td><td>把「分數」改寫成健康／安全／學習指標；記錄前後測數據作 Validation</td></tr>
+      <tr><td>多人合作寫劇本、演示</td><td>先訪談受惠者（長者中心、同學、家長），用故事證明 Problem 20%</td></tr>
+      <tr><td>關卡設計與趣味性</td><td>趣味服務依從性（adherence），不是最終目的；Benefits 要寫清誰受惠、如何量度</td></tr>
+    </tbody>
+  </table>
+  <p class="small muted">紅線：不要只提交「校園打機作品」。綠燈：遊戲／App = 介面；micro:bit = 控制器／感應器；核心是社區問題 + 原型 + 證據。</p>
+</section>
+<section id="recs"><h2>3. 本年推薦題目｜Concrete topics for ELCHK LUAC</h2><p class="muted">假設隊伍強項是 <b>micro:bit 遊戲／App 作控制器</b>。下列題目都刻意保留遊戲化，但綁定真實受惠者與可做原型。</p>
+    <div class="rec">
+      <h3>1. 握力復康小機：長者肌少症訓練器</h3>
+      <p class="small muted">GripQuest — Sarcopenia Training Controller</p>
+      <div class="kv">
+        <b>Theme</b><span>Medical &amp; Healthcare</span>
+        <b>Beneficiary</b><span>The elderly；可兼 Chronic patients</span>
+        <b>Why this year</b><span>最直接沿用 micro:bit＋遊戲技能；對標上年「握住健康」。壓力／力傳感器 + MakeCode/Scratch 訓練關卡 + 可換阻力。評分：Creativity（遊戲化）+ Benefits（肌力／血壓敘事）+ Validation（前後握力數據）。</span>
+        <b>Name example</b><span>「力力更生」GripQuest <span class="muted">（中英對照、短而記得住）</span></span>
+      </div>
+    </div>
+    <div class="rec">
+      <h3>2. 坐姿腳位小偵探：課堂護脊提醒</h3>
+      <p class="small muted">FootRight — Classroom Sitting Coach</p>
+      <div class="kv">
+        <b>Theme</b><span>Education（可兼 Medical）</span>
+        <b>Beneficiary</b><span>Teenagers/Student；Children；Family</span>
+        <b>Why this year</b><span>對標「iSitWell」。椅腳／踏板壓力或距離感應 + micro:bit 提醒 + 課堂小遊戲獎勵正確腳位。易在本校取樣驗證。</span>
+        <b>Name example</b><span>「腳踏實學」FootRight Coach <span class="muted">（中英對照、短而記得住）</span></span>
+      </div>
+    </div>
+    <div class="rec">
+      <h3>3. 記憶關卡伴侶：認知刺激＋日常提示</h3>
+      <p class="small muted">MemoMate — Cognitive Play Companion</p>
+      <div class="kv">
+        <b>Theme</b><span>Medical &amp; Healthcare / Smart Living</span>
+        <b>Beneficiary</b><span>The elderly；Chronic patients；Family</span>
+        <b>Why this year</b><span>對標「記憶守護者」但降難度：micro:bit 按鈕／LED 做配對記憶與服藥／飲水提示，家屬可看簡單紀錄。強調陪伴而非醫療宣稱。</span>
+        <b>Name example</b><span>「記住你」MemoMate <span class="muted">（中英對照、短而記得住）</span></span>
+      </div>
+    </div>
+    <div class="rec">
+      <h3>4. 回收分類教練車：玩完即分類</h3>
+      <p class="small muted">SortRover — Learn-then-Sort micro:bit Robot</p>
+      <div class="kv">
+        <b>Theme</b><span>Sustainability</span>
+        <b>Beneficiary</b><span>Children；Teenagers/Student；General Public</span>
+        <b>Why this year</b><span>對標 RecycleGPT／廚餘助手。先用 App 遊戲學分類，再用 micro:bit Maqueen／線循車把物品送到正確回收區——技能完全對口，演示極強。</span>
+        <b>Name example</b><span>「分得清」SortRover <span class="muted">（中英對照、短而記得住）</span></span>
+      </div>
+    </div>
+    <div class="rec">
+      <h3>5. 家居逃生演練手掣：火警決策小訓練</h3>
+      <p class="small muted">EscapeDrill — Fire Decision Trainer</p>
+      <div class="kv">
+        <b>Theme</b><span>Smart Living / Creative Solutions</span>
+        <b>Beneficiary</b><span>Family；Children；The elderly；People with disability（可加震動／燈光模式）</span>
+        <b>Why this year</b><span>火警主題上年極多，要差異化：不要只做感應警報，改做「家庭演練＋決策訓練」手掣（煙霧情境卡 + micro:bit 選擇正確路線），再加簡易門磁／溫度演示。</span>
+        <b>Name example</b><span>「走寶」EscapeDrill <span class="muted">（中英對照、短而記得住）</span></span>
+      </div>
+    </div>
+    <div class="rec">
+      <h3>6. 書包姿勢關卡：過重／寒背雙提醒</h3>
+      <p class="small muted">BagBuddy — Posture &amp; Load School Coach</p>
+      <div class="kv">
+        <b>Theme</b><span>Education / Smart Living</span>
+        <b>Beneficiary</b><span>Teenagers/Student；Children</span>
+        <b>Why this year</b><span>對標書包 Idol，但用 micro:bit 加速度／拉力近似偵測 + 遊戲化每週挑戰，較易以現有技能落地；在校門做測試即可取 Validation。</span>
+        <b>Name example</b><span>「背得輕」BagBuddy <span class="muted">（中英對照、短而記得住）</span></span>
+      </div>
+    </div>
+  <div class="callout"><strong>選題建議：</strong>若時間緊，優先 <b>#1 握力</b> 或 <b>#2 坐姿</b>（驗證容易、技能匹配最高）。想突出機械演示可選 <b>#4 回收車</b>。火警題競爭激烈，只有在「演練／共融」有獨特角度才建議。</div>
+</section>
+
+<section id="form">
+  <h2>4. 申請表欄位提示｜Application-form field tips</h2>
+  <h3>中／英項目名稱 Project name</h3>
+  <ul>
+    <li>格式參考入圍作品：<b>中文名 + English name</b>（可含輕微雙關，但要一讀就懂受惠對象／功能）。</li>
+    <li>好例子風格：握住健康 Grip the Health；街泊路路通 Park &amp; Easy Toll；易拾杖 Easy Pick。</li>
+    <li>避免只取可愛無關的名字；評審應能從名稱猜到問題域。</li>
+  </ul>
+  <h3>主題 Theme</h3>
+  <ul>
+    <li>只選<b>一個</b>最贴切主題；用「問題的主要現場」決定（家中長者→Medical/Smart Living；校內學習→Education；街道公共→Smart City；回收環境→Sustainability）。</li>
+    <li>Creative Solutions 適合共融／非常規形態，但仍要寫清問題。</li>
+  </ul>
+  <h3>受惠對象 Beneficiary（表格選項）</h3>
+  <p class="small">Children；Chronic patients；Family；General Public；People with disability；Teenagers/Student；The elderly；Particular occupation；Other</p>
+  <ul>
+    <li>選<b>最核心</b>受惠者（可在內文提及次要受惠者）。</li>
+    <li>micro:bit 遊戲題通常：The elderly / Teenagers/Student / Children / People with disability。</li>
+  </ul>
+  <h3>創作靈感 Inspiration 字數</h3>
+  <table>
+    <thead><tr><th>語言</th><th>建議長度</th><th>寫法</th></tr></thead>
+    <tbody>
+      <tr><td>中文</td><td><b>約 120–150 字</b></td><td>場景痛點 → 觀察／訪談 → 為何用創科 → 期望改變（一句）</td></tr>
+      <tr><td>English</td><td><b>約 50–70 words</b></td><td>Who suffers → what fails today → your tech approach → hoped impact</td></tr>
+    </tbody>
+  </table>
+  <p class="small muted">中英應同義，不要英文只翻譯口號；兩邊都要有「真實觀察」一句。</p>
+  <h3>迷你範例（握力題）</h3>
+  <p><b>中文靈感（約140字）：</b>我們探訪社區長者時發現，不少公公婆婆因肌力下降而打不開瓶蓋，又覺得復康訓練枯燥而難以堅持。參考醫療上「握力反映整體健康」的說法，我們想用 micro:bit 感測握力，做成可換阻力的訓練遊戲，讓長者在玩樂中完成每日短訓練，並記錄進度給家人參考，希望提升依從性與生活自信。</p>
+  <p><b>English (~60 words):</b> After visiting local elders, we noticed weaker grip made daily tasks hard, yet rehab felt boring. Using a micro:bit grip sensor and a simple training game with adjustable resistance, we aim to help elders practise short daily sessions, track progress for families, and improve adherence—not just entertainment.</p>
+</section>
+
+<section id="playlist">
+  <h2>5. 短片靈感庫｜2025–2026 Primary finalist playlist</h2>
+  <p>來源播放清單：<a href="https://www.youtube.com/watch?v=4aIPLXx5tcM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">YouTube PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a>（共 43 支）。每卡含主題、技術、為何有競爭力。資料來源標記如下：</p>
+  <p>
+    <span class="badge tx">transcript</span> 有可用字幕／逐字稿　
+    <span class="badge press">press</span> 另有新聞補充　
+    <span class="badge no">title/desc</span> 字幕受阻，依標題／簡介／公開報道推斷
+  </p>
+
+  <article class="video" id="v-4aIPLXx5tcM">
+    <h3>01. 2337 記憶守護者 Memory Guardian</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=4aIPLXx5tcM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=4aIPLXx5tcM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：油蔴地天主教小學（海泓道）</p>
+    <div class="kv">
+      <b>Essence</b><span>為認知／記憶退化長者設計的「記憶守護者」：以鏡頭／系統協助辨識家人、提醒日常，減輕家人照顧壓力。<br/><span class="muted">Memory-support system for elders with cognitive decline—helps recognise family and cue daily life, easing caregiver burden.</span></span>
+      <b>Theme</b><span>Medical &amp; Healthcare</span>
+      <b>Tech</b><span>Camera/AI recognition + reminder UX</span>
+      <b>Why competitive</b><span>Strong human-centred story; dementia is a growing HK need; emotional presentation.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-IO7ec3zvj18">
+    <h3>02. 2343 最佳「智」友，「語」你同行！ Speech Buddy</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=IO7ec3zvj18&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=IO7ec3zvj18&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>「Speech Buddy」語音／溝通同行助手——從名稱與組別推斷為支援說話練習或語言溝通的智能友伴（無可用字幕）。<br/><span class="muted">Speech Buddy—likely a speech/communication companion for practice or support (no usable captions retrieved).</span></span>
+      <b>Theme</b><span>Education / Medical &amp; Healthcare</span>
+      <b>Tech</b><span>Likely speech/AI companion app or device</span>
+      <b>Why competitive</b><span>Inclusive communication themes score well if paired with real users and a prototype.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-8s-XPij61Fg">
+    <h3>03. 2359 雪櫃&quot;鮮&quot;生 Mr. i-Fridge</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=8s-XPij61Fg&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=8s-XPij61Fg&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：基督教培恩小學</p>
+    <div class="kv">
+      <b>Essence</b><span>長者易食壞食物：HuskyLens 辨新鮮／發霉水果，micro:bit 顯示✓／✗，並在雪櫃外加顯示主動提醒。<br/><span class="muted">Mr. i-Fridge uses HuskyLens + micro:bit to flag fresh vs mouldy food and adds an external display so elders see alerts without opening the fridge.</span></span>
+      <b>Theme</b><span>Smart Living / Medical</span>
+      <b>Tech</b><span>HuskyLens AI cam + micro:bit + external display</span>
+      <b>Why competitive</b><span>Relatable elder food-safety problem; micro:bit demo; iterative upgrade from user testing.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-HMpzwpg2p34">
+    <h3>04. 2360 穩步前行 Steady step</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=HMpzwpg2p34&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=HMpzwpg2p34&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：基督教培恩小學</p>
+    <div class="kv">
+      <b>Essence</b><span>長者跌倒風險高：把 micro:bit 綁鞋上，偵測前方障礙物，協助「穩步前行」。<br/><span class="muted">Shoe-mounted micro:bit obstacle detector to reduce elderly trip/fall risk while walking.</span></span>
+      <b>Theme</b><span>Medical &amp; Healthcare</span>
+      <b>Tech</b><span>micro:bit + proximity/obstacle sensing on footwear</span>
+      <b>Why competitive</b><span>Clear stats-backed problem; wearable hardware prototype; elder beneficiary.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-rz5bl4nnH4Y">
+    <h3>05. 2370 握住健康 Grip the Health</h3>
+    <span class="badge tx">transcript</span><span class="badge press">press</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=rz5bl4nnH4Y&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=rz5bl4nnH4Y&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：中華基督教會元朗真光小學</p>
+    <div class="kv">
+      <b>Essence</b><span>針對長者肌少症，把壓力感測器放入握力球，經 micro:bit 把握力數據傳到 Scratch，做成「測試／訓練」遊戲，並可換不同硬度握力球以漸進訓練。<br/><span class="muted">Addresses elderly sarcopenia: pressure sensors in a grip ball send data via micro:bit to a Scratch game for test/train modes, with swappable ball hardness for progressive training.</span></span>
+      <b>Theme</b><span>Medical &amp; Healthcare / 醫療及保健</span>
+      <b>Tech</b><span>micro:bit + pressure sensor + Scratch gamification</span>
+      <b>Why competitive</b><span>Clear human need, measurable training feedback, hardware+app prototype, strong creativity + benefits fit; featured in pre-fair press.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-944As0Xi6y8">
+    <h3>06. 2377 聲中「衣」星 The Dressing Star</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=944As0Xi6y8&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=944As0Xi6y8&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：陳瑞祺（喇沙）小學</p>
+    <div class="kv">
+      <b>Essence</b><span>「聲中衣星／Dressing Star」——從名稱推斷為以語音／聽覺輔助穿衣搭配或更衣的方案（無可用字幕）。<br/><span class="muted">Dressing Star—likely voice/audio-assisted dressing or outfit guidance (no usable captions).</span></span>
+      <b>Theme</b><span>Smart Living / People with disability support</span>
+      <b>Tech</b><span>Likely voice UI + clothing guidance</span>
+      <b>Why competitive</b><span>Accessibility + daily living can be competitive if validated with users.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-nFsYplfHd0s">
+    <h3>07. 2403 綠色守護者 - 路燈空氣淨化系統 EcoDefender</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=nFsYplfHd0s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=nFsYplfHd0s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：青山天主教小學</p>
+    <div class="kv">
+      <b>Essence</b><span>「EcoDefender」路燈空氣淨化系統——結合路燈與空氣淨化／監測，改善城市空氣質素（自動字幕語種不可用）。<br/><span class="muted">EcoDefender streetlight air-purification/monitoring concept for urban air quality (usable captions unavailable).</span></span>
+      <b>Theme</b><span>Sustainability / Smart City</span>
+      <b>Tech</b><span>Streetlight-integrated air cleaning/monitoring IoT</span>
+      <b>Why competitive</b><span>Public infrastructure angle; sustainability theme; needs solid prototype + data.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-SwSBHjxx1RE">
+    <h3>08. 2420 RFID 智慧引路徑 RFID Smart Guide Path</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=SwSBHjxx1RE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=SwSBHjxx1RE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：優才（楊殷有娣）書院</p>
+    <div class="kv">
+      <b>Essence</b><span>RFID 智慧引路徑——以 RFID 引導路徑，服務視障或其他需要導航協助的用家（優才楊殷有娣書院）。<br/><span class="muted">RFID Smart Guide Path—RFID-based wayfinding path for navigation assistance (e.g. visually impaired users).</span></span>
+      <b>Theme</b><span>Smart City / Creative Solutions</span>
+      <b>Tech</b><span>RFID tags/readers + guidance feedback</span>
+      <b>Why competitive</b><span>Inclusive design; tangible path demo; clear beneficiary.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-KsJmX5sLQtA">
+    <h3>09. 2421 智舒展：居家智慧服健助手 SmartStretch</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=KsJmX5sLQtA&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=KsJmX5sLQtA&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>智舒展：居家智慧服健助手——在家引導伸展／復康運動的智能助手。<br/><span class="muted">SmartStretch—home intelligent exercise/rehab stretching assistant.</span></span>
+      <b>Theme</b><span>Medical &amp; Healthcare / Smart Living</span>
+      <b>Tech</b><span>Likely sensors + guided exercise app/hardware</span>
+      <b>Why competitive</b><span>Home health adherence is a strong need; fits creativity + benefits if measurable.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-KME_6fLhTWo">
+    <h3>10. 2507 行行出狀元 Stroke Champs</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=KME_6fLhTWo&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=KME_6fLhTWo&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：保良局馮晴紀念小學</p>
+    <div class="kv">
+      <b>Essence</b><span>「行行出狀元」：把漢字寫字轉成全身職業／動作體驗遊戲，以身體記憶帶動學習，減輕執筆壓力。<br/><span class="muted">Stroke Champs turns Chinese character writing into whole-body occupational/action games so embodied memory supports literacy learning.</span></span>
+      <b>Theme</b><span>Education</span>
+      <b>Tech</b><span>Embodied/game-based learning system (body-as-input)</span>
+      <b>Why competitive</b><span>Creative pedagogy; children beneficiary; strong presentation potential—frame as learning need not pure fun.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-qLhsMEnw8zY">
+    <h3>11. 2509 街泊路路通 Park &amp; Easy Toll</h3>
+    <span class="badge tx">transcript</span><span class="badge press">press</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=qLhsMEnw8zY&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=qLhsMEnw8zY&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：天水圍循道衛理小學</p>
+    <div class="kv">
+      <b>Essence</b><span>針對咪錶車位被長期佔用：AI 鏡頭辨車牌並計時，NFC 模擬「易通行」扣費，停愈久費愈高以加快車位流轉（小學組金獎）。<br/><span class="muted">Smart meter-parking system: AI camera reads plates and times stays; NFC simulates auto-pay with escalating fees to free up spaces (Primary Gold).</span></span>
+      <b>Theme</b><span>Smart City / 智慧城市</span>
+      <b>Tech</b><span>AI vision, NFC, progressive pricing prototype</span>
+      <b>Why competitive</b><span>Real street problem, iterated prototypes, dual ID fallback; won Primary Gold — strong design &amp; validation story.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-Yhv9xjxRFgE">
+    <h3>12. 2540 智能污衣籃 Smart Laundry Basket</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=Yhv9xjxRFgE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=Yhv9xjxRFgE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>智能污衣籃——自動分類／提示污衣處理的智能洗衣籃，減輕家務負擔。<br/><span class="muted">Smart Laundry Basket—automated sorting/prompting of laundry to ease household chores.</span></span>
+      <b>Theme</b><span>Smart Living</span>
+      <b>Tech</b><span>Sensors + sorting/notification prototype</span>
+      <b>Why competitive</b><span>Everyday family pain point; feasible primary prototype.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-WIMT6T2iUJw">
+    <h3>13. 2545 大型災害急救箱 Intelligent Disaster First Aid Kit</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=WIMT6T2iUJw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=WIMT6T2iUJw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：英皇書院同學會小學</p>
+    <div class="kv">
+      <b>Essence</b><span>大型災害急救箱：教學短片＋三色指示取用三類物資處理傷口，並含 GPS 顯示用家位置。<br/><span class="muted">Intelligent disaster first-aid kit with instructional video, three-light guidance for supplies, and GPS user location.</span></span>
+      <b>Theme</b><span>Smart Living / Medical / Creative</span>
+      <b>Tech</b><span>Guided first-aid kit UI + GPS</span>
+      <b>Why competitive</b><span>Disaster readiness is timely; clear demo of guided use + location.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-aGU7PrcSh50">
+    <h3>14. 2551 聲著 clothmate</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=aGU7PrcSh50&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=aGU7PrcSh50&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：油蔴地天主教小學（海泓道）</p>
+    <div class="kv">
+      <b>Essence</b><span>「聲著 clothmate」：協助視障／弱視人士選配衣物顏色與搭配，解決只摸到質地看不見顏色的困難。<br/><span class="muted">clothmate helps visually impaired users match clothing colours/outfits when touch alone cannot convey colour.</span></span>
+      <b>Theme</b><span>Smart Living / Creative Solutions</span>
+      <b>Tech</b><span>Colour/outfit sensing + voice guidance</span>
+      <b>Why competitive</b><span>Strong accessibility narrative; family/disability beneficiaries.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-hA3Hu2UDKqw">
+    <h3>15. 2580 「智引求生」火災逃生系統 i-Escape</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=hA3Hu2UDKqw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=hA3Hu2UDKqw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：英皇書院同學會小學第二校</p>
+    <div class="kv">
+      <b>Essence</b><span>「智引求生」火災逃生系統——智能引導火場逃生的系統方案。<br/><span class="muted">i-Escape fire escape system providing intelligent guidance during building fires.</span></span>
+      <b>Theme</b><span>Smart Living / Smart City</span>
+      <b>Tech</b><span>Sensors + escape guidance UI</span>
+      <b>Why competitive</b><span>Same hot theme as other fire projects; differentiate with testing &amp; unique UX.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-btEIQ75OCt4">
+    <h3>16. 2590 書包Idol Schoolbag monitor</h3>
+    <span class="badge tx">transcript</span><span class="badge press">press</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=btEIQ75OCt4&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=btEIQ75OCt4&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：聖公會青衣邨何澤芸小學</p>
+    <div class="kv">
+      <b>Essence</b><span>書包常超重：用 AI 姿態／圖像識別判斷書包是否過重（彎腰、書包下墜變形），以螢幕表情與語音提醒（小學組銅獎）。<br/><span class="muted">AI posture/image system flags overweight schoolbags via posture and bag sag, with on-screen face + voice prompts (Primary Bronze).</span></span>
+      <b>Theme</b><span>Education / Smart Living / 教育／智慧生活</span>
+      <b>Tech</b><span>AI pose/image recognition, display + speaker, 3D housing</span>
+      <b>Why competitive</b><span>Everyday student problem, school-tested, clear beneficiary, bronze-level competitiveness.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-QJxr5pstWAI">
+    <h3>17. 2597 易時泊 Easy Park</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=QJxr5pstWAI&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=QJxr5pstWAI&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>易時泊 Easy Park——簡化／智能化泊車或泊位時間管理的方案。<br/><span class="muted">Easy Park—simplified/smart parking or parking-time management solution.</span></span>
+      <b>Theme</b><span>Smart City</span>
+      <b>Tech</b><span>Likely sensing/app parking aid</span>
+      <b>Why competitive</b><span>Urban parking is proven competitive (cf. Gold winner); needs distinct angle.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-MjjSazC5I1E">
+    <h3>18. 2600 智識食 AI Dietary Consultant</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=MjjSazC5I1E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=MjjSazC5I1E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：保良局莊啟程小學</p>
+    <div class="kv">
+      <b>Essence</b><span>「智識食」AI 飲食顧問 App：協助長者／有健康限制者判斷食物是否合適，減少「不知可不可以食」的焦慮。<br/><span class="muted">AI Dietary Consultant app helping elders/people with diet limits judge whether foods are suitable.</span></span>
+      <b>Theme</b><span>Medical &amp; Healthcare / Smart Living</span>
+      <b>Tech</b><span>Mobile AI dietary advisory app</span>
+      <b>Why competitive</b><span>Chronic/elder nutrition need; app+research can work if paired with validation.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-S_mbrUUdixU">
+    <h3>19. 2609 環環相救 VibraC</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=S_mbrUUdixU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=S_mbrUUdixU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>環環相救 VibraC——從名稱推斷為震動／循環式互助求救或警示裝置。<br/><span class="muted">VibraC—likely a vibration-based alert/rescue aid (title-inferred).</span></span>
+      <b>Theme</b><span>Smart Living / Medical</span>
+      <b>Tech</b><span>Vibration signalling / wearable alert</span>
+      <b>Why competitive</b><span>Accessibility &amp; emergency signalling can compete with clear user tests.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-1wk9N5glQbo">
+    <h3>20. 2620 保寶媬 See See Care</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=1wk9N5glQbo&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=1wk9N5glQbo&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>保寶媬 See See Care——嬰幼兒／護理照顧監察或提醒方案（名稱暗示「看顧」）。<br/><span class="muted">See See Care—infant/caregiver monitoring or care-support concept.</span></span>
+      <b>Theme</b><span>Smart Living / Medical</span>
+      <b>Tech</b><span>Monitoring/alert care device or app</span>
+      <b>Why competitive</b><span>Family caregiving need; keep privacy &amp; safety evidence strong.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-MijDqyg5vVw">
+    <h3>21. 2628 高智能雨傘 High-tech Smart Umbrella</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=MijDqyg5vVw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=MijDqyg5vVw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：慈航學校</p>
+    <div class="kv">
+      <b>Essence</b><span>高智能雨傘——為雨傘加入感應／提示功能（如遺失、風雨），提升日常安全與便利（慈航學校）。<br/><span class="muted">High-tech smart umbrella with sensing/alerts for daily safety and convenience.</span></span>
+      <b>Theme</b><span>Smart Living / Creative</span>
+      <b>Tech</b><span>Umbrella-embedded sensors/alerts</span>
+      <b>Why competitive</b><span>Fun creative object—must prove a real problem (e.g. elderly safety) beyond gimmick.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-PM940s0uAak">
+    <h3>22. 2635 百淨號 Easy Scrubber</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=PM940s0uAak&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=PM940s0uAak&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>百淨號 Easy Scrubber——簡化清潔／擦洗工作的輔助工具，減輕體力負擔。<br/><span class="muted">Easy Scrubber—assistive cleaning tool to reduce physical burden of scrubbing.</span></span>
+      <b>Theme</b><span>Smart Living</span>
+      <b>Tech</b><span>Mechanical/electronic cleaning aid</span>
+      <b>Why competitive</b><span>Elder/occupation beneficiaries if ergonomics validated.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-4f9N48IAlIE">
+    <h3>23. 2665 漁夫寶 AIoT HK Marine farming</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=4f9N48IAlIE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=4f9N48IAlIE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：軒尼詩道官立小學（銅鑼灣）</p>
+    <div class="kv">
+      <b>Essence</b><span>漁夫寶 AIoT 香港海洋養殖——以 AIoT 支援本地漁業／養殖監測與管理。<br/><span class="muted">AIoT support system for Hong Kong marine farming/fisheries monitoring.</span></span>
+      <b>Theme</b><span>Sustainability / Smart City</span>
+      <b>Tech</b><span>AIoT environmental/farming sensors</span>
+      <b>Why competitive</b><span>Local industry + sustainability; stronger if field data shown.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-ETQHia3qnBU">
+    <h3>24. 2668 玩轉坐姿——腳踏實地 iSitWell</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=ETQHia3qnBU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=ETQHia3qnBU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：保良局世德小學</p>
+    <div class="kv">
+      <b>Essence</b><span>「玩轉坐姿——腳踏實地」iSitWell：發現學生上半身姿勢尚可但腳擺放不良，設計 App／系統糾正坐姿腳位以護骨骼發育。<br/><span class="muted">iSitWell targets students’ poor foot placement while seated—an app/system to correct posture for growing bones.</span></span>
+      <b>Theme</b><span>Education / Medical</span>
+      <b>Tech</b><span>Sitting-posture sensing + corrective app/game</span>
+      <b>Why competitive</b><span>School-relevant; children beneficiary; game/controller skills map well if hardware included.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-7dwsB6OYc4E">
+    <h3>25. 2675 【連連】有餘 AI廚餘回收小助手</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=7dwsB6OYc4E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=7dwsB6OYc4E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>【連連】有餘——AI 廚餘回收小助手，協助正確處理／回收廚餘。<br/><span class="muted">Connect Smart AI Food Waste Recycling Assistant for correct food-waste handling.</span></span>
+      <b>Theme</b><span>Sustainability</span>
+      <b>Tech</b><span>AI classification + recycling guidance</span>
+      <b>Why competitive</b><span>HK food-waste policy relevance; pair with prototype bin/scale.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-6vtUzNo6dsw">
+    <h3>26. 2728 司機救星 Driver’s Savior</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=6vtUzNo6dsw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=6vtUzNo6dsw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>司機救星——協助駕駛者安全／健康或應急的方案（職業安全方向）。<br/><span class="muted">Driver’s Savior—driver safety/health/emergency support concept.</span></span>
+      <b>Theme</b><span>Smart City / Medical</span>
+      <b>Tech</b><span>In-vehicle sensing/alerts</span>
+      <b>Why competitive</b><span>Occupation beneficiary (drivers); OSH-aligned themes are competitive.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-20Ntte2uJiU">
+    <h3>27. 2781 智能驅動輪椅 AI Powered Wheelchair</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=20Ntte2uJiU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=20Ntte2uJiU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>智能驅動輪椅：以 Google Teachable Machine 訓練手勢／語音，連接馬達讓用家自行控制輪椅移動。<br/><span class="muted">AI-powered wheelchair controlled by Teachable Machine gesture/voice models linked to motors.</span></span>
+      <b>Theme</b><span>Medical / Creative Solutions</span>
+      <b>Tech</b><span>Teachable Machine AI + motorised wheelchair prototype</span>
+      <b>Why competitive</b><span>Empowering disability independence; vivid demo; strong creativity+benefits.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-oxQpTXRzqrg">
+    <h3>28. 2788 逃生導航 Smart Fire Escape Advisor</h3>
+    <span class="badge tx">transcript</span><span class="badge press">press</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=oxQpTXRzqrg&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=oxQpTXRzqrg&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：基督教宣道會徐澤林紀念小學</p>
+    <div class="kv">
+      <b>Essence</b><span>火警時居民難即時判斷逃生；系統以 IoT／煙霧感應分析樓層狀況，平板顯示煙霧分佈與路線，門外 LED 指示方向，並可向消防輸入受困人數與特別需要。<br/><span class="muted">IoT/smoke-sensor fire-escape advisor: flat-panel maps smoke and routes, door LEDs guide direction, and trapped residents can report headcount/special needs to fire services.</span></span>
+      <b>Theme</b><span>Smart Living / Smart City / 智慧生活／智慧城市</span>
+      <b>Tech</b><span>IoT sensors, LED guidance, tablet UI, 3D prototyping</span>
+      <b>Why competitive</b><span>Timely HK community pain point (fire safety), multi-stakeholder design, strong problem+benefits+presentation story.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-MlPxvVTPZ2U">
+    <h3>29. 2795 守護者智能單車外套 i-Safe Cycling Jacket</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=MlPxvVTPZ2U&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=MlPxvVTPZ2U&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：彩雲聖若瑟小學</p>
+    <div class="kv">
+      <b>Essence</b><span>守護者智能單車外套——為單車騎士加入發光／感應警示的安全外套。<br/><span class="muted">i-Safe cycling jacket with sensing/lighting alerts for cyclist safety.</span></span>
+      <b>Theme</b><span>Smart Living / Smart City</span>
+      <b>Tech</b><span>Wearable sensors + visibility alerts</span>
+      <b>Why competitive</b><span>Road safety beneficiary; wearable prototype is judge-friendly.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-gxPsO5eh8hM">
+    <h3>30. 2836 智能滅蟑器 AI Cockroaches Killer</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=gxPsO5eh8hM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=gxPsO5eh8hM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：中華基督教青年會小學</p>
+    <div class="kv">
+      <b>Essence</b><span>智能滅蟑器：AI 鏡頭辨識蟑螂後驅動噴灑殺蟲，減少人畜誤觸有毒噴劑的風險。<br/><span class="muted">AI camera detects cockroaches then triggers spray—aimed at safer pest control for people/pets.</span></span>
+      <b>Theme</b><span>Smart Living / Creative</span>
+      <b>Tech</b><span>AI vision + actuated sprayer</span>
+      <b>Why competitive</b><span>Relatable home problem; safety-for-pets angle; careful ethics/safety demo needed.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-bWEtwFiZg-s">
+    <h3>31. 2844 綠識回收小助手 RecycleGPT</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=bWEtwFiZg-s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=bWEtwFiZg-s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：香港道教聯合會雲泉學校</p>
+    <div class="kv">
+      <b>Essence</b><span>回收分類困難：AI 鏡頭辨物料，再由 Maqueen micro:bit 機械人把垃圾運到正確回收格。<br/><span class="muted">AI identifies waste material; a Maqueen micro:bit robot transports it to the correct recycling slot.</span></span>
+      <b>Theme</b><span>Sustainability / 可持續發展</span>
+      <b>Tech</b><span>AI object recognition + micro:bit Maqueen robot</span>
+      <b>Why competitive</b><span>Combines AI with tangible robot demo; micro:bit-friendly; clear environmental benefit.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-45CARxfZAzQ">
+    <h3>32. 2883 安心聲路・避焰通 SafeRoute+ BlazeAlert</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=45CARxfZAzQ&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=45CARxfZAzQ&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：德信學校</p>
+    <div class="kv">
+      <b>Essence</b><span>安心聲路・避焰通：門上感溫／火焰／紅外偵測警報，手提模式可助視障人士在火場用聲音／震動找逃生方向。<br/><span class="muted">SafeRoute+ BlazeAlert—door heat/flame sensing plus portable mode helping visually impaired users find escape routes by sound/vibration.</span></span>
+      <b>Theme</b><span>Smart Living / Creative</span>
+      <b>Tech</b><span>Multi-sensors + audio/haptic escape guidance</span>
+      <b>Why competitive</b><span>Inclusive fire safety; dual-mode design; disability+family beneficiaries.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-_1aPh5-BDJU">
+    <h3>33. 2941 慧眼淨居 Smart Eye Refresh</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=_1aPh5-BDJU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=_1aPh5-BDJU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：佛教慈敬學校</p>
+    <div class="kv">
+      <b>Essence</b><span>慧眼淨居：為長者監測室內空氣／窗戶相關風險，提示何時開窗或外出更安全，像「看不見的守護精靈」。<br/><span class="muted">Smart Eye Refresh monitors home air/window-related risks for elders and cues safer window/outdoor decisions.</span></span>
+      <b>Theme</b><span>Smart Living / Medical</span>
+      <b>Tech</b><span>Air-quality/window sensing + elder-friendly alerts</span>
+      <b>Why competitive</b><span>Gentle tech care for elders; clear smart-living fit.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-uO9ceJhnDus">
+    <h3>34. 2964 AI 智能發電回收箱</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=uO9ceJhnDus&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=uO9ceJhnDus&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：金巴崙長老會耀道小學</p>
+    <div class="kv">
+      <b>Essence</b><span>AI 智能發電回收箱：結合回收與發電／能量回收概念，提高回收誘因並處理香港低回收率問題。<br/><span class="muted">AI-powered recycling bin concept that also generates/harvests energy to incentivise recycling amid HK’s low rates.</span></span>
+      <b>Theme</b><span>Sustainability</span>
+      <b>Tech</b><span>Smart bin + energy harvesting + AI sorting cues</span>
+      <b>Why competitive</b><span>Dual sustainability story; needs credible energy numbers.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-Jj-qRZSCxBw">
+    <h3>35. 2980 智慧洗澡開關助手</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=Jj-qRZSCxBw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=Jj-qRZSCxBw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>智慧洗澡開關助手——協助長者／行動不便者更安全地控制淋浴開關。<br/><span class="muted">Intelligent shower switch assistant for safer bathing control by elders or people with limited mobility.</span></span>
+      <b>Theme</b><span>Smart Living / Medical</span>
+      <b>Tech</b><span>Assistive shower control hardware</span>
+      <b>Why competitive</b><span>High-risk daily activity (bathroom falls); strong benefits if prototyped safely.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-2MkhKv9su4s">
+    <h3>36. 2995 弱樹臨風警報器 TreeWatch</h3>
+    <span class="badge no">title/desc</span><span class="badge press">press</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=2MkhKv9su4s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=2MkhKv9su4s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：拔萃男書院附屬小學</p>
+    <div class="kv">
+      <b>Essence</b><span>極端天氣下綜合多項指標預測樹木傾倒風險並預警（最受歡迎大獎）。<br/><span class="muted">Multi-indicator early-warning for urban tree fall risk in extreme weather (Most Popular Award).</span></span>
+      <b>Theme</b><span>Sustainability / Smart City / 可持續發展／智慧城市</span>
+      <b>Tech</b><span>Environmental/tilt/wind sensing + alert logic (prototype)</span>
+      <b>Why competitive</b><span>Visible public-safety need in typhoon-prone HK; strong public appeal.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-QmWwXEItYbQ">
+    <h3>37. 3009 轉線易 Change lanes indicator</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=QmWwXEItYbQ&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=QmWwXEItYbQ&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：仁濟醫院羅陳楚思小學</p>
+    <div class="kv">
+      <b>Essence</b><span>轉線易：感應器貼於車尾監察後方距離並反饋，協助駕駛者更安全轉線。<br/><span class="muted">Lane-change indicator/sensor on the vehicle monitors rear distance to support safer lane changes.</span></span>
+      <b>Theme</b><span>Smart City</span>
+      <b>Tech</b><span>Rear-distance sensing + driver feedback</span>
+      <b>Why competitive</b><span>Personal family pain point story; road-safety benefits; keep scope realistic for primary.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-dVWdBaQvG1E">
+    <h3>38. 3020 熱感守護衣 HeatGuard Vest</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=dVWdBaQvG1E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=dVWdBaQvG1E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>熱感守護衣 HeatGuard Vest——監測體溫／熱壓力並警示的守護背心（户外／職安方向）。<br/><span class="muted">HeatGuard Vest monitors heat stress/body temperature and alerts the wearer.</span></span>
+      <b>Theme</b><span>Medical / Smart Living</span>
+      <b>Tech</b><span>Wearable temp/heat sensors + alerts</span>
+      <b>Why competitive</b><span>Heat stress is a HK OSH issue; occupation/elder beneficiaries.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-_FwODVwMb08">
+    <h3>39. 3027 智慧單車安全伴行系統</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=_FwODVwMb08&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=_FwODVwMb08&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：東華三院王余家潔紀念小學</p>
+    <div class="kv">
+      <b>Essence</b><span>智慧單車安全伴行系統——陪伴單車騎士的安全警示／偵測系統（東華三院王余家潔紀念小學）。<br/><span class="muted">Smart bike safety companion system for cyclist detection/alerts.</span></span>
+      <b>Theme</b><span>Smart City / Smart Living</span>
+      <b>Tech</b><span>Bike-mounted sensing + companion alerts</span>
+      <b>Why competitive</b><span>Active transport safety; tangible on-bike prototype.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-2Ob97PavnMw">
+    <h3>40. 3037 再別康橋 HealthBridge</h3>
+    <span class="badge tx">transcript</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=2Ob97PavnMw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=2Ob97PavnMw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：瑪利諾修院學校（小學部）</p>
+    <div class="kv">
+      <b>Essence</b><span>再別康橋 HealthBridge：為學業壓力大的學生做的 App（音樂放鬆、情緒自拍、商店、日記等），協助情緒健康。<br/><span class="muted">HealthBridge student wellbeing app—music relaxation, emotion selfie, shop, diary—to ease academic stress.</span></span>
+      <b>Theme</b><span>Education / Medical</span>
+      <b>Tech</b><span>Mobile mental-wellbeing app</span>
+      <b>Why competitive</b><span>Student mental health need; for HKSF, add hardware/prototype + research beyond pure app.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-X-X4ugs9dV4">
+    <h3>41. 3052 易拾杖 Easy Pick</h3>
+    <span class="badge no">title/desc</span><span class="badge press">press</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=X-X4ugs9dV4&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=X-X4ugs9dV4&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    <p class="small muted">School / 學校：保良局黃永樹小學</p>
+    <div class="kv">
+      <b>Essence</b><span>易拾杖 Easy Pick——輔助拾物的智能／改良手杖，減少長者彎腰拾物受傷（小學組優異）。<br/><span class="muted">Easy Pick assistive cane/grabber to help elders pick up items without risky bending (merit award).</span></span>
+      <b>Theme</b><span>Medical / Smart Living</span>
+      <b>Tech</b><span>Assistive cane + picker mechanism</span>
+      <b>Why competitive</b><span>Simple, testable, elder-centred; strong benefits + design validation path.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-Ywqz45wh9JE">
+    <h3>42. 3091 防火法蜥 Fire-rescue salamander</h3>
+    <span class="badge no">title/desc</span><span class="badge press">press</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=Ywqz45wh9JE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=Ywqz45wh9JE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>可攀爬棚架／外牆的「防火蜥蜴」機械人，配備火焰、溫度、煙霧感應及 AI 鏡頭，協助定位火源。<br/><span class="muted">Climbing “fire-rescue salamander” robot with flame/temp/smoke sensors and AI camera to locate fire sources on scaffolding/facades.</span></span>
+      <b>Theme</b><span>Smart City / Creative Solutions / 智慧城市／創意思維</span>
+      <b>Tech</b><span>Climbing robot + multi-sensors + AI vision</span>
+      <b>Why competitive</b><span>Inspired by real fire tragedies; dramatic demo + firefighter-relevant use case.</span>
+    </div>
+  </article>
+
+  <article class="video" id="v-3OxL1dCdyjE">
+    <h3>43. 3141 全聲導 Sound &amp; Safe</h3>
+    <span class="badge no">title/desc</span>
+    <p class="small"><a href="https://www.youtube.com/watch?v=3OxL1dCdyjE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=3OxL1dCdyjE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
+    
+    <div class="kv">
+      <b>Essence</b><span>全聲導 Sound &amp; Safe——以全聲音／聽覺引導提升安全的方案（適合視障或黑暗環境）。<br/><span class="muted">Sound &amp; Safe—full audio guidance for safety (e.g. visually impaired or low-visibility settings).</span></span>
+      <b>Theme</b><span>Creative Solutions / Smart Living</span>
+      <b>Tech</b><span>Audio guidance / sonic navigation</span>
+      <b>Why competitive</b><span>Inclusive safety; pair with prototype + user trials.</span>
+    </div>
+  </article>
+
+  <hr style="border:none;border-top:1px solid var(--line);margin:1.4rem 0"/>
+  <p class="small muted">字幕擷取說明：雲端環境遭 YouTube bot／登入牆限制。成功取得可用字幕／逐字稿 <b>20</b> 支；其餘 <b>23</b> 支改以雙語標題、影片簡介（學校）及公開新聞綜合。EcoDefender 僅取得錯誤語種自動字幕，故亦標為 title/desc。建議老師若本機可開字幕，可再核對標記為 title/desc 的條目。</p>
+</section>
+<footer>
+  <p>內部研究簡報 · 供 ELCHK LUAC 選題使用 · 離線可開啟本 HTML · Playlist processed: 43 · Generated for HKSF 2026–2027 planning.</p>
+</footer>
+</div>
+</body>
+</html>

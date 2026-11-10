@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Science Fair briefing — winners, and what to build next</title>
+<meta name="description" content="A teacher briefing on the primary winners of the Hong Kong Science Fair, and project directions for students who design interfaces and build apps and games with micro:bit and Arduino.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,480;0,6..72,620;1,6..72,480&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4efe6;
+    --paper-2: #fffdf9;
+    --ink: #1b1914;
+    --muted: #5c564c;
+    --faint: #8a8174;
+    --line: #e3d9c8;
+    --line-strong: #cfc3ae;
+    --forest: #142420;
+    --forest-2: #1d3530;
+    --gold: #8a5a10;
+    --gold-bg: #f6e6c6;
+    --silver: #3d4a57;
+    --silver-bg: #e6ebf1;
+    --bronze: #7a3e22;
+    --bronze-bg: #f4ddd3;
+    --pop: #0e5c54;
+    --pop-bg: #d7eeea;
+    --ember: #b8431f;
+    --ember-bg: #fde8df;
+    --good: #1d6a42;
+    --shadow: 0 18px 40px rgba(28, 24, 16, 0.06);
+    --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+    --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.55;
+    font-weight: 420;
+  }
+  img { max-width: 100%; }
+  a { color: var(--pop); }
+  a:hover { color: var(--ember); }
+  :focus-visible {
+    outline: 2px solid var(--ember);
+    outline-offset: 3px;
+  }
+
+  .skip {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    background: white;
+    padding: 0.5rem 0.8rem;
+    z-index: 20;
+  }
+  .skip:focus { top: 1rem; }
+
+  .hero {
+    background:
+      radial-gradient(900px 420px at 90% -10%, rgba(232, 168, 92, 0.22), transparent 60%),
+      linear-gradient(165deg, var(--forest) 0%, #1a3330 55%, #243f38 100%);
+    color: #f6f1e7;
+    padding: 2.2rem 1.4rem 3.2rem;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  .eyebrow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    align-items: center;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #d7c4a2;
+    margin: 0 0 1.2rem;
+  }
+  .eyebrow span { opacity: 0.7; }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 480;
+    font-size: clamp(2.3rem, 5vw, 4.15rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem;
+    max-width: 16ch;
+  }
+  .deck {
+    max-width: 42rem;
+    font-size: 1.12rem;
+    line-height: 1.5;
+    color: #efe6d6;
+    margin: 0 0 1.6rem;
+  }
+  .deck em { font-family: var(--serif); font-style: italic; color: #fff; }
+
+  .remember {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.7rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .remember li {
+    background: rgba(255, 252, 246, 0.06);
+    border: 1px solid rgba(246, 232, 206, 0.16);
+    border-radius: 14px;
+    padding: 0.85rem 0.85rem 0.95rem;
+  }
+  .remember strong {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 620;
+    font-size: 1.35rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.25rem;
+  }
+  .remember span { display: block; color: #e7dcc8; font-size: 0.92rem; line-height: 1.35; }
+
+  nav.bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(244, 239, 230, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav.bar .wrap {
+    display: flex;
+    gap: 0.4rem 1.1rem;
+    flex-wrap: wrap;
+    padding: 0.75rem 0;
+  }
+  nav.bar a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 560;
+  }
+  nav.bar a:hover { color: var(--ember); }
+
+  main { padding: 2.4rem 1.4rem 4rem; }
+  section { margin: 0 0 3.4rem; scroll-margin-top: 4.2rem; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 480;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0 0 0.7rem;
+  }
+  h3 {
+    font-family: var(--serif);
+    font-weight: 620;
+    font-size: 1.45rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.35rem;
+    line-height: 1.15;
+  }
+  .lede { max-width: 44rem; color: var(--muted); margin: 0 0 1.3rem; font-size: 1.05rem; }
+  .kicker {
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ember);
+    font-weight: 680;
+    margin: 0 0 0.45rem;
+  }
+
+  .pattern {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1rem;
+  }
+  .pattern article, .note, .card, .idea, .lane, .path {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+  }
+  .steps { margin: 0; padding: 0.4rem; list-style: none; display: grid; gap: 0.55rem; }
+  .steps li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.8rem;
+    align-items: start;
+    padding: 0.85rem 0.9rem;
+    border-radius: 14px;
+    background: #faf7f1;
+  }
+  .num {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    color: var(--ember);
+    line-height: 1;
+    padding-top: 0.1rem;
+  }
+  .steps strong { display: block; }
+  .steps p { margin: 0.15rem 0 0; color: var(--muted); font-size: 0.95rem; }
+
+  .callout { padding: 1.2rem 1.25rem 1.3rem; }
+  .callout p:last-child { margin-bottom: 0; }
+  .callout h3 { font-size: 1.55rem; }
+
+  .winners { display: grid; gap: 0.9rem; }
+  .card { padding: 1.15rem 1.2rem 1.2rem; }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    align-items: flex-start;
+    margin-bottom: 0.7rem;
+  }
+  .award {
+    flex: none;
+    font-size: 0.75rem;
+    font-weight: 680;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+  }
+  .award.gold { background: var(--gold-bg); color: var(--gold); }
+  .award.silver { background: var(--silver-bg); color: var(--silver); }
+  .award.bronze { background: var(--bronze-bg); color: var(--bronze); }
+  .award.pop { background: var(--pop-bg); color: var(--pop); }
+  .meta { color: var(--faint); font-size: 0.88rem; margin: 0.15rem 0 0; }
+  .zh { font-family: var(--serif); font-style: italic; color: var(--muted); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem 1.2rem; margin-top: 0.8rem; }
+  .label {
+    display: block;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--faint);
+    font-weight: 680;
+    margin-bottom: 0.15rem;
+  }
+  .card p { margin: 0.35rem 0; }
+
+  .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 1rem; }
+  .fit ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+  .fit li { margin: 0.35rem 0; }
+  .warn {
+    background: var(--ember-bg);
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    margin-top: 0.9rem;
+  }
+  .warn strong { color: var(--bronze); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper-2);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    font-size: 0.95rem;
+  }
+  th, td { text-align: left; padding: 0.75rem 0.85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 680; background: #faf6ef; }
+  td.numc, th.numc { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.primary td { background: #f3faf6; }
+  caption {
+    text-align: left;
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    padding: 0 0 0.6rem;
+    caption-side: top;
+  }
+  .scroll { overflow-x: auto; }
+
+  .bars { display: grid; gap: 0.55rem; margin: 1rem 0 0; }
+  .bar-row { display: grid; grid-template-columns: 9.5rem 1fr auto; gap: 0.6rem; align-items: center; font-size: 0.92rem; }
+  .track { height: 10px; background: #efe8dc; border-radius: 99px; overflow: hidden; }
+  .fill { display: block; height: 100%; background: var(--forest-2); border-radius: 99px; }
+  .fill.hot { background: var(--ember); }
+  .pct { font-variant-numeric: tabular-nums; color: var(--muted); }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 0.9rem; }
+  .filters button {
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 560;
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+  }
+  .filters button[aria-pressed="true"] {
+    background: var(--forest);
+    color: #f6f1e7;
+    border-color: var(--forest);
+  }
+
+  .ideas { display: grid; gap: 0.9rem; }
+  .idea { padding: 1.15rem 1.2rem 1.25rem; }
+  .idea[hidden] { display: none; }
+  .idea-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .idea-no {
+    font-family: var(--serif);
+    font-size: 2rem;
+    line-height: 0.9;
+    color: var(--ember);
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; justify-content: flex-end; }
+  .tag {
+    font-size: 0.75rem;
+    font-weight: 680;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: #f3eee4;
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 0.28rem 0.5rem;
+  }
+  .who { margin: 0.2rem 0 0.6rem; color: var(--muted); }
+  .blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.7rem; }
+  .block {
+    background: #faf7f1;
+    border-radius: 12px;
+    padding: 0.75rem 0.8rem;
+  }
+  .block p { margin: 0; }
+  .judge {
+    margin-top: 0.7rem;
+    padding-top: 0.7rem;
+    border-top: 1px dashed var(--line-strong);
+  }
+
+  .path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
+  .path { padding: 1rem 1rem 1.05rem; box-shadow: none; }
+  .path .stepn {
+    font-family: var(--serif);
+    color: var(--ember);
+    font-size: 1.3rem;
+  }
+
+  .lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+  .lane { padding: 1rem 1.05rem; box-shadow: none; }
+  .lane h3 { font-size: 1.2rem; }
+
+  footer.colophon {
+    border-top: 1px solid var(--line);
+    padding: 1.4rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+  footer.colophon .wrap p { margin: 0.35rem 0; }
+  footer ol { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+
+  @media (max-width: 1100px) {
+    .remember { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 900px) {
+    .remember, .pattern, .split, .grid-2, .blocks, .path-grid, .lanes { grid-template-columns: 1fr; }
+    .bar-row { grid-template-columns: 1fr; gap: 0.2rem; }
+    h1 { max-width: none; }
+  }
+  @media print {
+    .hero { background: white; color: black; padding: 0; }
+    .deck, .remember span, .eyebrow { color: black; }
+    nav.bar, .filters { display: none; }
+    body { background: white; font-size: 12pt; }
+    .card, .idea, .callout, .path, .lane { box-shadow: none; break-inside: avoid; }
+    a { color: black; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Hong Kong Innovation Foundation · Science Fair <span>Briefing for 2026–27</span></p>
+    <h1>Keep the signal small. Make the human action clear.</h1>
+    <p class="deck">The primary winners of the Fifth Hong Kong Science Fair each took a problem people in Hong Kong already feel, read it with a simple board, and turned the reading into something a person <em>does</em>: pay, play, look up, or move. This page is for teams who are strong at interface design and who can vibe-code apps and games on micro:bit and Arduino.</p>
+    <ol class="remember">
+      <li><strong>01</strong><span>Name a person and a moment, then show you asked them.</span></li>
+      <li><strong>02</strong><span>Read one physical signal the board can actually measure.</span></li>
+      <li><strong>03</strong><span>Put the team’s design skill in the screen, the game, or the controls.</span></li>
+      <li><strong>04</strong><span>Show two approaches you tried, dropped, and can explain.</span></li>
+      <li><strong>05</strong><span>Bring three versions, each changed by a test.</span></li>
+    </ol>
+  </div>
+</header>
+
+<nav class="bar" aria-label="On this page">
+  <div class="wrap">
+    <a href="index.html">All pages</a>
+    <a href="#essence">Essence</a>
+    <a href="#winners">Winners</a>
+    <a href="#fit">Our students</a>
+    <a href="#criteria">Criteria</a>
+    <a href="#ideas">Ideas</a>
+    <a href="#path">How to build</a>
+    <a href="#avoid">Leave these</a>
+  </div>
+</nav>
+
+<main id="content">
+  <div class="wrap">
+
+    <section id="essence">
+      <p class="kicker">The pattern</p>
+      <h2>What the winning ideas have in common</h2>
+      <p class="lede">The hardware lists differ. The shape of the work does not. A judge can retell each project in one breath, and a visitor at the HKCEC booth can see what to do.</p>
+      <div class="pattern">
+        <ol class="steps">
+          <li>
+            <span class="num">1</span>
+            <div>
+              <strong>A local problem with a person in it</strong>
+              <p>A driver circling for a meter. A senior whose grip is fading. A student under a heavy bag. A tree in typhoon wind. The problem is already in the city. The team’s job is to show why it matters, with observation, interviews, or a count.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <div>
+              <strong>A signal the board can read</strong>
+              <p>A camera and a plate. Pressure in a ball. Posture in a frame. Tilt and wind. micro:bit is the messenger, sometimes the measurer. The invention is the link, the rule, and the way a person meets the result.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <div>
+              <strong>An action, timed to the moment</strong>
+              <p>Pay through a system people already use. Keep squeezing because a character climbs. Warn with light and sound the right adults can hear. Flag a tree before it fails. Information that sits in a spreadsheet does not score the way an action does.</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">4</span>
+            <div>
+              <strong>A second try after the first one fails</strong>
+              <p>The gold team’s camera missed plates, so they added another way to identify the car and rebuilt the model more than once. That trail is the design mark. A single polished demo, with no record of what changed, leaves the largest primary mark — creativity — thin.</p>
+            </div>
+          </li>
+        </ol>
+        <aside class="callout">
+          <p class="kicker">For this team</p>
+          <h3>Design is the part you can win on purpose.</h3>
+          <p>Primary creativity is 30% of the mark, the largest slice. It asks for an original approach, a look at other solutions, and a join between fields. Interface design, a game loop, and a sensor reading are three fields. Joined around one Hong Kong user, they are a project.</p>
+          <p>Vibe coding — building the app or game quickly with coding tools, then judging it by letting people use it — fits the validation mark, on one condition. The team can explain every screen, and a test log shows what users forced them to change. A beautiful file with no users is a poster.</p>
+          <p>HKIF’s own aims sit in the same place: meet people outside school, put the idea in front of the public, and carry a clear story to an overseas programme. A booth a stranger understands in a minute is ready for that.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="winners">
+      <p class="kicker">Primary division · Fifth Hong Kong Science Fair</p>
+      <h2>Four projects, and the move inside each</h2>
+      <p class="lede">Gold, silver, and bronze below follow the project notes for this briefing. TreeWatch is the primary Most Popular Award, chosen by public vote at the fair in June 2026. Chinese names are given where a published title is on record.</p>
+
+      <div class="winners">
+
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3>Park &amp; Easy Toll <span class="zh">街泊路路通</span></h3>
+              <p class="meta">#2509 · Tin Shui Wai Methodist Primary School · Teacher: Chan Chun Wai<br>Li Shing Yurk, Chen Chak Yu, Moo Pak Hang, So Ka Man</p>
+            </div>
+            <span class="award gold">Gold</span>
+          </div>
+          <p><strong>Essence.</strong> A metered bay should turn over. The longer a car stays, the more it should cost, and the driver should pay through a system they already have, without hunting for coins or an app they have never opened.</p>
+          <div class="grid-2">
+            <div>
+              <span class="label">What they built</span>
+              <p>An AI camera reads the plate and the start time. A micro:bit sends that to the driver’s phone over Bluetooth. On departure the fee is worked out on a rising scale, and the driver is sent to HKeToll to pay.</p>
+            </div>
+            <div>
+              <span class="label">What coverage adds</span>
+              <p>The work started from a parking dispute on Heung Wo Street in Tsuen Wan. The team interviewed drivers and parents. When the camera missed plates in poor light and on sideways bays, they added an NFC tap, modelled on a student card, and rebuilt the model about three times.</p>
+            </div>
+            <div>
+              <span class="label">Why it scores</span>
+              <p>Needs analysis is a street and a set of conversations. Creativity is the rising fee plus a public payment rail, after a backup method earned its place by a failed test. Impact is a bay freed for the next short stay.</p>
+            </div>
+            <div>
+              <span class="label">Take this, leave the parking meter</span>
+              <p>Start from a scene you witnessed. When the sensor fails, add a second method and write down why. Use a service people already trust. The screen that explains the fee in one glance is the piece a design-strong team would have made sharper.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3>Grip the Health</h3>
+              <p class="meta">#2370 · CCC Chun Kwong Primary School · Teacher: Chan Yun Lam<br>Chan Oi Ki, To Sheung, Wong Chi Shing Bryant, Lo Yan To</p>
+            </div>
+            <span class="award silver">Silver</span>
+          </div>
+          <p><strong>Essence.</strong> Grip exercise is medicine people skip. Make a character climb only while the hand squeezes, and the exercise becomes something a senior wants to repeat.</p>
+          <div class="grid-2">
+            <div>
+              <span class="label">What they built</span>
+              <p>A pressure sensor inside a grip ball, a micro:bit, and a Scratch app. Two modes: Grip Test and Grip Training. Squeeze and the character rises. Release and it descends. The aim is regular practice, against sarcopenia and the falls that follow.</p>
+            </div>
+            <div>
+              <span class="label">Why it scores</span>
+              <p>The sensor is ordinary. The loop is the idea: measurement and motivation in one object, aimed at a named health risk. It joins physical therapy, a game, and a board. That is the creativity criterion in primary colours.</p>
+            </div>
+            <div>
+              <span class="label">Take this</span>
+              <p>A game earns the mark when the body action <em>is</em> the input, and when a real user comes back to it. Two modes show they understood a person (test, then train), not only a component.</p>
+            </div>
+            <div>
+              <span class="label">Leave this lane</span>
+              <p>Another grip ball, another “health game” that claims to diagnose, or a Scratch sprite with no session log. Our students can build a finer interface than Scratch. The fair still wants the squeeze — or whatever the action is — to be physically real, and the before-and-after to come from people.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3>Schoolbag Monitor</h3>
+              <p class="meta">#2590 · SKH Tsing Yi Estate Ho Chak Wan Primary School · Teacher: Chen Yinghua<br>Yeung Cheuk Him, Lee Chak Yin, Fung Hei Ching, Lau Chung Young</p>
+            </div>
+            <span class="award bronze">Bronze</span>
+          </div>
+          <p><strong>Essence.</strong> A heavy bag is a health problem you can see badly with one glance. Read posture and the body’s pivot points as well as the picture, then tell the student, the teacher, and the parent in light and sound.</p>
+          <div class="grid-2">
+            <div>
+              <span class="label">What they built</span>
+              <p>A camera the student walks past. Detection combines posture, pivot points, and image analysis, because a bag’s outline alone is a weak clue. LEDs and an audio alert follow the result.</p>
+            </div>
+            <div>
+              <span class="label">Why it scores</span>
+              <p>Creativity here is the method: they say why a single model fails, and they add a second way of looking. Impact depends on the alert reaching someone who can lighten the bag tomorrow. The accuracy claim only holds if they counted hits and misses.</p>
+            </div>
+            <div>
+              <span class="label">Take this</span>
+              <p>If a reading is unreliable, show the failure, then add one more signal and publish the error count. Design the alert for the person who can act, in a form they notice without panic.</p>
+            </div>
+            <div>
+              <span class="label">Leave this lane</span>
+              <p>A camera on classmates to score posture, mood, or “bad behaviour.” Consent, accuracy, and privacy all get harder, and the shape of the project is one the judges have just seen.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div>
+              <h3>TreeWatch <span class="zh">弱樹臨風警報器</span></h3>
+              <p class="meta">#2995 · Diocesan Boys’ School Primary Division · Teacher: Lam Tsz Kin Felix<br>Yu Lok Chee Clarence, Chan Alexis Chun Ming, Chan Adam Cheuk Wang, Lee Quentin Sung Hei</p>
+            </div>
+            <span class="award pop">Most popular</span>
+          </div>
+          <p><strong>Essence.</strong> In a typhoon city, people worry about trees falling. Two simple numbers — how far the trunk leans, how hard the wind pushes — watched over time, can speak before the dangerous hour.</p>
+          <div class="grid-2">
+            <div>
+              <span class="label">What they built</span>
+              <p>Tilt and wind sensors on a compact micro:bit. Continuous logging, a stability judgement, and an early warning. The public voted it the primary Most Popular Award. The model is easy to point at and easy to retell.</p>
+            </div>
+            <div>
+              <span class="label">Why people stopped</span>
+              <p>Familiar risk, visible hardware, a warning with a purpose. Popularity at this fair is a presentation lesson: a stranger can explain the danger and the response after one minute at the booth. micro:bit was enough.</p>
+            </div>
+            <div>
+              <span class="label">Take this</span>
+              <p>Make the risk readable in one look. Words and icons together, a threshold written in plain language, a reason the number matters this season in Hong Kong. That is interface work.</p>
+            </div>
+            <div>
+              <span class="label">Leave this lane</span>
+              <p>Another tilt-and-wind tree alarm, or a generic “smart sensor dashboard” with six charts and no decision. The vote went to a warning someone could act on.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="fit">
+      <p class="kicker">Fit</p>
+      <h2>Where UI, games, micro:bit, and Arduino actually help</h2>
+      <div class="split">
+        <div class="fit callout">
+          <h3>The board is the witness. The interface is the argument.</h3>
+          <ul>
+            <li><strong>User research is already a design skill.</strong> Interviews, a short survey, and watching someone fail a task are the 20% needs-analysis mark. Write the problem in the user’s words.</li>
+            <li><strong>The app or game is where you outbuild a Scratch sprite.</strong> Empty states, a wrong-button undo, type large enough for a grandparent, colour plus a word so the meaning survives colour-blindness, a screen that reads from across a playground. Judges feel this before they read the board.</li>
+            <li><strong>Keep the hardware thin so the demo survives the hall.</strong> One sensor, one cable for the booth, a labelled recording from the school test if the hall radio is noisy. Say when a run is recorded.</li>
+            <li><strong>micro:bit</strong> fits radio between boards, the v2 microphone, buttons, Bluetooth to a phone, and simple logging. <strong>Arduino</strong> fits temperature probes, humidity, CO2 modules, a load cell, and large arcade buttons.</li>
+            <li><strong>Everyone on the team of three or four can tell the failure.</strong> Judges ask the quiet student what broke and what you changed.</li>
+          </ul>
+          <div class="warn">
+            <strong>A trap with the micro:bit temperature block.</strong> The on-board reading is the chip, warmed by the processor, not the room and not the playground. Heat and air projects need an external sensor (a DHT22, a BME280, a CO2 module). State that in the report. Honesty about the instrument is a validation point.
+          </div>
+        </div>
+        <div class="callout">
+          <p class="kicker">Primary weights, where to spend the craft</p>
+          <h3>Creativity is the wide slice.</h3>
+          <div class="bars" aria-hidden="true">
+            <div class="bar-row"><span>Problem</span><span class="track"><span class="fill" style="width:20%"></span></span><span class="pct">20</span></div>
+            <div class="bar-row"><span>Creativity</span><span class="track"><span class="fill hot" style="width:30%"></span></span><span class="pct">30</span></div>
+            <div class="bar-row"><span>Design &amp; test</span><span class="track"><span class="fill" style="width:20%"></span></span><span class="pct">20</span></div>
+            <div class="bar-row"><span>Impact</span><span class="track"><span class="fill" style="width:20%"></span></span><span class="pct">20</span></div>
+            <div class="bar-row"><span>Presentation</span><span class="track"><span class="fill" style="width:10%"></span></span><span class="pct">10</span></div>
+          </div>
+          <p>A designed game on a real signal collects creativity (fields joined, alternatives rejected), validation (users, versions), and presentation (the booth looks like the product) in one object. Impact stays specific: this class, this senior centre, this bus bay — a person who can use it next week.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="criteria">
+      <p class="kicker">Hong Kong Science Fair 2026–27</p>
+      <h2>How the mark scheme reads this kind of team</h2>
+      <p class="lede">Same five questions in every division. The weights shift. Primary pays the most for creativity. Senior pays more for proof, scale, and a research trail. Testing and Certification is a separate prize for secondary teams only.</p>
+
+      <div class="scroll">
+        <table>
+          <caption>Share of the main award</caption>
+          <thead>
+            <tr>
+              <th>Criterion</th>
+              <th>What judges ask</th>
+              <th class="numc">Primary</th>
+              <th class="numc">Junior</th>
+              <th class="numc">Senior</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="primary">
+              <td>I. Problem and needs</td>
+              <td>Is the problem clear, and is the background backed by research, observation, interviews, questionnaires, or data?</td>
+              <td class="numc">20%</td>
+              <td class="numc">20%</td>
+              <td class="numc">20%</td>
+            </tr>
+            <tr class="primary">
+              <td>II. Creativity</td>
+              <td>Is the approach original? Did the team look at other solutions and go beyond them? Are fields joined with a result that has its own value?</td>
+              <td class="numc">30%</td>
+              <td class="numc">25%</td>
+              <td class="numc">20%</td>
+            </tr>
+            <tr class="primary">
+              <td>III. Design and validation</td>
+              <td>Is there a prototype? Was the process logical? Are results tested, and did tests change the design? Does it address the problem?</td>
+              <td class="numc">20%</td>
+              <td class="numc">25%</td>
+              <td class="numc">25%</td>
+            </tr>
+            <tr class="primary">
+              <td>IV. Benefits and impact</td>
+              <td>Does it answer a real problem for people, the community, or the environment? Senior teams are also asked about wider use or a market.</td>
+              <td class="numc">20%</td>
+              <td class="numc">20%</td>
+              <td class="numc">25%</td>
+            </tr>
+            <tr class="primary">
+              <td>V. Presentation</td>
+              <td>Are the board, the model, and the talk clear? Is evidence used well? Do the materials meet the page limits?</td>
+              <td class="numc">10%</td>
+              <td class="numc">10%</td>
+              <td class="numc">10%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="lanes" style="margin-top: 0.9rem;">
+        <article class="lane">
+          <h3>Outstanding Research Project Awards</h3>
+          <p>Senior secondary only, and only among shortlisted teams. Up to three teams. The extra mark is commitment over time (20%), repeated testing and improvement (30%), learning from failure (20%), and a full documented journey with sources and evidence (30%). A vibe-coded interface can win this only if the notebook is as real as the screens: dates, failed builds, the change each failure caused.</p>
+        </article>
+        <article class="lane">
+          <h3>Testing and Certification Special Awards</h3>
+          <p>Junior and senior together, judged by the Hong Kong Council for Testing and Certification. One gold, one silver, one bronze. Relevance to testing (30%), feasibility and standards (25%), scientific merit and a look at similar products (20%), originality (15%), presentation (10%). Primary teams are outside this prize. They can still do the science. Two ideas below — Heat Whistle and Lunchbox Line — are the ones that can grow into this award if the team is secondary, because each can name a public method and compare two instruments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="ideas">
+      <p class="kicker">Directions</p>
+      <h2>Six ideas that use design as the invention</h2>
+      <p class="lede">Each one leaves the four winning lanes, stays buildable on micro:bit or Arduino, and gives the interface a job. Filter by the kind of work the team enjoys. Any of them can be told at primary depth, then deepened with more trials if the team is secondary.</p>
+      <div class="filters" role="toolbar" aria-label="Filter ideas">
+        <button type="button" aria-pressed="true" data-filter="all">All six</button>
+        <button type="button" aria-pressed="false" data-filter="game">Game-led</button>
+        <button type="button" aria-pressed="false" data-filter="research">Interview-led</button>
+        <button type="button" aria-pressed="false" data-filter="standard">Standard-led</button>
+      </div>
+      <div class="ideas">
+
+        <article class="idea" data-tags="game standard">
+          <div class="idea-head">
+            <div>
+              <div class="idea-no">01</div>
+              <h3>Class Breath <span class="zh">課室一口風</span></h3>
+              <p class="who">For one classroom that goes stale behind shut windows, and the teacher who decides when to air it.</p>
+            </div>
+            <div class="tags"><span class="tag">Game</span><span class="tag">Arduino</span><span class="tag">Air</span></div>
+          </div>
+          <p>Hong Kong classrooms often stay sealed against noise and heat. Students get sleepy. Nobody shares a sign that it is time to open a window. The project is a class creature the students design. It slumps when the air is stale and recovers when the room is aired. The score is the room’s, never a named child’s.</p>
+          <div class="blocks">
+            <div class="block">
+              <span class="label">Signal</span>
+              <p>Arduino and a CO2 module (SCD41 or similar). If the school cannot get one, use a BME280 for temperature and humidity and narrow the claim to comfort. Say so on the board. A spot reading is a sample, not an 8-hour certification test.</p>
+            </div>
+            <div class="block">
+              <span class="label">The screen</span>
+              <p>One full-screen creature, named by the class, with states students illustrate: awake, drowsy, asking for a window. A second view for the teacher is a single line of the last hour. Large type. No leaderboard.</p>
+            </div>
+            <div class="block">
+              <span class="label">Research to do first</span>
+              <p>One lesson of observation (window state, how the room feels). A short class survey. A talk with the teacher who runs the air-conditioner. Cite the EPD Indoor Air Quality objectives: 8-hour CO2 of 800 ppmv (Excellent) and 1,000 ppmv (Good) for offices and public places, and explain that your lesson sample is shorter than that test.</p>
+            </div>
+            <div class="block">
+              <span class="label">Alternatives to show you rejected</span>
+              <p>A scolding alarm. A chart that ranks students. Both punish. The creature asks the class to act together, which is the Grip the Health loop pointed at shared air.</p>
+            </div>
+            <div class="block">
+              <span class="label">Three tests</span>
+              <p>Three afternoons in the same room. Log the reading, whether the window opened, and a one-tap “how sleepy” from the class. Change the threshold or the creature because of what happened. The graph of the three days is the validation page.</p>
+            </div>
+            <div class="block">
+              <span class="label">Impact you can claim</span>
+              <p>This class aired the room when the creature asked, and the reading moved. A primary team stops there. A secondary team can repeat across two rooms and compare with the published 8-hour objectives without calling the result a certificate.</p>
+            </div>
+          </div>
+          <p class="judge"><span class="label">The question a judge will ask</span> “Did the creature change what the class did, or only decorate a sensor?” Answer with the afternoon the window stayed shut, the afternoon it opened, and the two readings.</p>
+        </article>
+
+        <article class="idea" data-tags="standard research">
+          <div class="idea-head">
+            <div>
+              <div class="idea-no">02</div>
+              <h3>Heat Whistle <span class="zh">熱哨</span></h3>
+              <p class="who">For the PE teacher on the playground, and in a second mode, children waiting in the sun at the bus bay.</p>
+            </div>
+            <div class="tags"><span class="tag">Standard</span><span class="tag">Arduino</span><span class="tag">Two modes</span></div>
+          </div>
+          <p>Heat and humidity in Hong Kong make “stop, drink, move to shade” a real decision. It is often made by feel. The project gives the teacher a number they can explain, on a scoreboard readable from across the court. The same sensor, second screen: a calm clock for the bus bay that says how long a child has been in full sun and points them to the canopy.</p>
+          <div class="blocks">
+            <div class="block">
+              <span class="label">Signal</span>
+              <p>Arduino with a DHT22 or BME280 in a shaded housing. Sun on the sensor invents a hotter day. Write that design choice on the board. The micro:bit can be the remote display. The measurement stays on the external sensor.</p>
+            </div>
+            <div class="block">
+              <span class="label">The screen</span>
+              <p>A sports scoreboard: huge type, an icon plus a word (colour alone fails some viewers), three messages such as “keep going,” “water break,” “move the drill to shade.” Bus-bay mode is a separate layout, illustrated, plain, and free of scare language. Two modes, like Grip Test and Grip Training, show two users of one instrument.</p>
+            </div>
+            <div class="block">
+              <span class="label">Research to do first</span>
+              <p>Interview two PE teachers. Read the current Hong Kong Observatory page for Hot and Very Hot Weather Warnings and quote its trigger. Log a week of playground readings with a household thermometer before the prototype exists. That week is needs analysis.</p>
+            </div>
+            <div class="block">
+              <span class="label">Alternatives to show you rejected</span>
+              <p>A phone notification the teacher will not see mid-game. A medical “heat stroke detector.” You are building a decision aid with a rule you can read aloud, tied to Observatory guidance, not a diagnosis.</p>
+            </div>
+            <div class="block">
+              <span class="label">Three tests</span>
+              <p>Can the teacher read the message at 5 metres and at 10? On which days did the badge agree with the Observatory warning, and on which days did the teacher disagree? Change the threshold because of those disagreements, and keep the disagreement log. Compare the probe with a second thermometer and write down the gap.</p>
+            </div>
+            <div class="block">
+              <span class="label">If the team is secondary</span>
+              <p>This is a Testing and Certification path. Name the method, compare instruments, and describe what the school tool is and is not. Wider use is a PE panel across one school, then a written note on what would have to be true to share it. Primary teams do the same tests and present them as proof the tool works.</p>
+            </div>
+          </div>
+          <p class="judge"><span class="label">The question a judge will ask</span> “Why should a teacher trust this more than looking at the children?” Answer with the shaded sensor, the second thermometer, and a day the number and the teacher disagreed — and what you changed.</p>
+        </article>
+
+        <article class="idea" data-tags="research">
+          <div class="idea-head">
+            <div>
+              <div class="idea-no">03</div>
+              <h3>Three Buttons <span class="zh">三個掣</span></h3>
+              <p class="who">For a senior the school already visits, and the family member who wants a simple piece of news.</p>
+            </div>
+            <div class="tags"><span class="tag">UX research</span><span class="tag">Arduino or micro:bit</span></div>
+          </div>
+          <p>Many products for older people fail at the screen, not at the feature list. This project starts by watching a senior stop. The result is a box with three enormous buttons — “I’m home,” “Please call,” “What’s today” — and a family page with three lines, a time, and a way to undo a mis-press. Cantonese first. One task per view.</p>
+          <div class="blocks">
+            <div class="block">
+              <span class="label">Signal</span>
+              <p>Three arcade buttons on Arduino or a micro:bit, plus a buzzer so the box itself confirms the press. The event is the signal. There is no health sensor and no claim about illness. Grip the Health measured the body. This one removes steps.</p>
+            </div>
+            <div class="block">
+              <span class="label">The screen</span>
+              <p>The senior side is the box, not a display. The family side is a page: huge type, empty state (“no news yet today”), timestamp, and “that was the wrong button.” Students design it with the family, on paper first. The fair demo can be the box and a laptop on the same table.</p>
+            </div>
+            <div class="block">
+              <span class="label">Research to do first</span>
+              <p>Visit. Watch one senior try a normal phone task and write the exact step they abandon. Ask the family which three messages would matter this week. Consent from the senior and the family, in writing the school already uses for visits. Six people is a small test. Call it that.</p>
+            </div>
+            <div class="block">
+              <span class="label">Alternatives to show you rejected</span>
+              <p>A simplified phone skin. Voice only. Run the same three tasks on those and on the box. Keep whichever wins on errors and time, even if the box loses and you have to change it. The comparison is the creativity mark.</p>
+            </div>
+            <div class="block">
+              <span class="label">Three tests</span>
+              <p>Same tasks, same people, version by version. Record time, mis-presses, and one sentence from each person. Version 2 exists because of a sentence (“I didn’t know if it heard me” → the buzzer). Version 3 is the one on the table.</p>
+            </div>
+            <div class="block">
+              <span class="label">Impact you can claim</span>
+              <p>These seniors finished a message their family could read. You are not claiming a product for every household in Hong Kong. A senior team that wants scale writes what would have to change to leave this centre: power, language, who maintains the box.</p>
+            </div>
+          </div>
+          <p class="judge"><span class="label">The question a judge will ask</span> “Why buttons, when phones already exist?” Answer with the step where the phone lost, the task times, and the undo.</p>
+        </article>
+
+        <article class="idea" data-tags="research">
+          <div class="idea-head">
+            <div>
+              <div class="idea-no">04</div>
+              <h3>Quiet Atlas <span class="zh">靜音地圖</span></h3>
+              <p class="who">For students who need a calmer place to read, including classmates who are easily overwhelmed, and for the librarian.</p>
+            </div>
+            <div class="tags"><span class="tag">Map</span><span class="tag">micro:bit v2</span></div>
+          </div>
+          <p>“Be quiet” is a slogan. Noise moves through a school day. The project is a floor plan, drawn and labelled in the words students use, coloured and patterned by sound level at three times of day, with a card that says where to sit now.</p>
+          <div class="blocks">
+            <div class="block">
+              <span class="label">Signal</span>
+              <p>One micro:bit v2 microphone. Walk a fixed route, or leave the board in four agreed spots. Write down place, time, and level. The map is drawn from the sheet. Radio between boards is optional and easy to drop if the corridor is hostile to it.</p>
+            </div>
+            <div class="block">
+              <span class="label">The screen</span>
+              <p>This is the design piece. A plan of one floor, pattern plus colour (not colour alone), room names students recognise, a “sit here now” card. Print the same visual system on the display board so the booth and the map are one product. Three drawn versions: the first was confusing, the labels changed, the third is the one the reading group used.</p>
+            </div>
+            <div class="block">
+              <span class="label">Research to do first</span>
+              <p>Ask the librarian and two students where they go when it is too loud. Walk with them. The map should answer their sentence, not a generic noise poster.</p>
+            </div>
+            <div class="block">
+              <span class="label">Alternatives to show you rejected</span>
+              <p>A siren that shames a noisy class. A league table of the loudest room. The atlas informs a choice of seat. Shaming is a different product, and a worse one.</p>
+            </div>
+            <div class="block">
+              <span class="label">Three tests</span>
+              <p>The map predicts the calmest spot at lunch. Measure again and mark hits and misses. The reading group uses it for several days and says whether they moved. Fix the label or the route because someone misread a room.</p>
+            </div>
+            <div class="block">
+              <span class="label">Impact you can claim</span>
+              <p>A named group found a seat that measured quieter, and could show you where on the plan. Presentation marks come almost free if the drawing is clear — and only if the measurements are on the board beside it.</p>
+            </div>
+          </div>
+          <p class="judge"><span class="label">The question a judge will ask</span> “Is this a poster or a measurement?” Point to the route, the three times of day, the second measurement, and the seat the group actually chose.</p>
+        </article>
+
+        <article class="idea" data-tags="standard">
+          <div class="idea-head">
+            <div>
+              <div class="idea-no">05</div>
+              <h3>Lunchbox Line <span class="zh">飯盒線</span></h3>
+              <p class="who">For families who pack lunch in the morning and are unsure what the Hong Kong heat does to it before noon.</p>
+            </div>
+            <div class="tags"><span class="tag">Standard</span><span class="tag">Arduino</span><span class="tag">T&amp;C path</span></div>
+          </div>
+          <p>A single horizontal line, morning to lunch, with the measured temperature of a dummy box drawn on it. The Centre for Food Safety danger band, above 4°C and below 60°C, is marked on the same line. A parent should grasp it in a few seconds. The sentence under the line is written with parents, then rewritten when they misread it.</p>
+          <div class="blocks">
+            <div class="block">
+              <span class="label">Signal</span>
+              <p>Arduino and a waterproof DS18B20 in a closed dummy box (water or rice the team does not eat). Log every few minutes from arrival until lunch, once on a hotter day and once on a milder day.</p>
+            </div>
+            <div class="block">
+              <span class="label">The screen</span>
+              <p>One line, one band, one sentence. Time on the axis, temperature as position, the danger band labelled in words. No gauge cluster. Test the sentence with two parents: “your rice entered the warm band at 10:40” either lands or it doesn’t. Change the words.</p>
+            </div>
+            <div class="block">
+              <span class="label">Research to do first</span>
+              <p>A short parent survey: when is food packed, and how long is it out of the fridge? Read the CFS guidance and cite it. The danger zone they publish is 4°C to 60°C, with a 2-hour / 4-hour rule for high-risk food. Quote the booklet. Do not invent a “safe number of hours” of your own.</p>
+            </div>
+            <div class="block">
+              <span class="label">Alternatives to show you rejected</span>
+              <p>A scare alert every minute. An AI camera pointed at real lunches. The line is calmer and matches the evidence you have, which is temperature over time.</p>
+            </div>
+            <div class="block">
+              <span class="label">Three tests</span>
+              <p>Calibrate: ice water and a warm cup, your probe beside a kitchen thermometer, the difference written down. Then the two school days. Then the parent sentence test. That calibration note is the project’s scientific spine.</p>
+            </div>
+            <div class="block">
+              <span class="label">If the team is secondary</span>
+              <p>Testing and Certification judges look for exactly this: a public method, a reference instrument, repeated trials, and a clear limit on the claim. The tool informs a family. It does not certify a lunchbox. Primary teams keep the same honesty and skip the special-award framing.</p>
+            </div>
+          </div>
+          <p class="judge"><span class="label">The question a judge will ask</span> “Are you telling parents to throw food away?” Answer: we show when the dummy box entered the band CFS describes, and we tell families to read that guidance. The probe was checked against another thermometer. The gap was this many degrees.</p>
+        </article>
+
+        <article class="idea" data-tags="game research">
+          <div class="idea-head">
+            <div>
+              <div class="idea-no">06</div>
+              <h3>Your Turn <span class="zh">輪到你</span></h3>
+              <p class="who">For classmates who sit out group games because the rules are shouted and fast.</p>
+            </div>
+            <div class="tags"><span class="tag">Game</span><span class="tag">micro:bit radio</span></div>
+          </div>
+          <p>Watch one recess and count turns. Some children rarely get one. The project is a set of micro:bits, one per player, that light and sound for the person whose turn it is, plus a game on the class screen that only moves when the lit board is pressed. The interface is the inclusion.</p>
+          <div class="blocks">
+            <div class="block">
+              <span class="label">Signal</span>
+              <p>Four to six micro:bits on radio. One bridge board on USB talks to the game, so the booth has a cable even if radio misbehaves. A teacher remote can pause or pass a turn. The press on the lit board is the only input that counts.</p>
+            </div>
+            <div class="block">
+              <span class="label">The screen</span>
+              <p>A game the team vibe-codes: big icons, a practice round, a way to leave without being displayed as “out.” Design the pause and the mis-press with the classmates who usually wait. Speed is a setting, because the first version will be too fast. That complaint is a feature of the log.</p>
+            </div>
+            <div class="block">
+              <span class="label">Research to do first</span>
+              <p>One recess tally: how many turns named classmates get in the existing game. A conversation with them and with the PE teacher about what “fair” feels like. Consent before any recording. A tally sheet is enough.</p>
+            </div>
+            <div class="block">
+              <span class="label">Alternatives to show you rejected</span>
+              <p>A faster reaction game that rewards the quickest hand. A scoreboard of winners. Both recreate the exclusion. The turn light gives the slower player the same invitation.</p>
+            </div>
+            <div class="block">
+              <span class="label">Three tests</span>
+              <p>Play the old game and the new one. Count turns again. Ask the students who used to wait whether they would play tomorrow. Slow the timing because they asked. Bring both tallies.</p>
+            </div>
+            <div class="block">
+              <span class="label">Impact you can claim</span>
+              <p>In this group, turns spread. You can show the counts. A secondary extension is a second class and a note on radio range in a real hall — a practical limit, which judges trust more than a promise to “roll out to all schools.”</p>
+            </div>
+          </div>
+          <p class="judge"><span class="label">The question a judge will ask</span> “Could you not just take turns without a gadget?” Answer with the tally from the shouted game, then the tally with the light. The gadget is there because the count changed.</p>
+        </article>
+
+      </div>
+
+      <div class="callout" style="margin-top: 0.9rem;">
+        <h3>Shorter starts, if none of the six fit the term</h3>
+        <p><strong>What we left behind.</strong> A canteen scale (load cell and Arduino) and a weekly poster the team designs, in kilograms of leftovers. Talk to the kitchen staff first. Skip photographs of students’ plates.</p>
+        <p><strong>West-facing glare.</strong> A light sensor and a “lower the blind” card for one room, only after observation shows glare actually stops work. Otherwise it is a gadget on a window.</p>
+        <p><strong>Movement between lessons.</strong> A micro:bit step game on the stairs. It earns a place only if a PE teacher or nurse confirms students skip movement. Otherwise Heat Whistle and Your Turn carry more need.</p>
+      </div>
+    </section>
+
+    <section id="path">
+      <p class="kicker">Same path for every idea</p>
+      <h2>How to build so the criteria can see the work</h2>
+      <div class="path-grid">
+        <article class="path">
+          <div class="stepn">1</div>
+          <h3>Problem, in someone’s words</h3>
+          <p>A scene, a count, and at least one conversation or a short questionnaire. Photographs of places are fine. Photographs of people need consent. List every source, including pages, libraries, icon packs, and the coding tools you used. The rules require that, and they forbid other people’s IP in the project.</p>
+        </article>
+        <article class="path">
+          <div class="stepn">2</div>
+          <h3>Two rejected ideas</h3>
+          <p>A page with the approaches you did not build, and the reason — a user disliked it, a sensor lied, it copied a recent winner, it shamed someone. This page is how primary creativity (30%) becomes visible.</p>
+        </article>
+        <article class="path">
+          <div class="stepn">3</div>
+          <h3>Version one, on a cable</h3>
+          <p>One signal into a page the team can vibe-code. Ugly is allowed. The micro:bit or Arduino should be explained by any student: what is read, what is sent, what the screen does with it.</p>
+        </article>
+        <article class="path">
+          <div class="stepn">4</div>
+          <h3>A test that hurts a little</h3>
+          <p>Users miss a button, a teacher cannot read the type, a probe disagrees with a thermometer, the creature nags. Write the result down the same day. Change one thing.</p>
+        </article>
+        <article class="path">
+          <div class="stepn">5</div>
+          <h3>Version two and three</h3>
+          <p>Each version has a date, a photo of the screen, and the sentence that forced the change. Three versions is the trail the gold parking team could point to. It is also what Outstanding Research, later, calls repeated validation.</p>
+        </article>
+        <article class="path">
+          <div class="stepn">6</div>
+          <h3>One booth, one story</h3>
+          <p>Board order follows the mark scheme: problem and evidence, ideas you dropped, photos of the three versions, the numbers, who it helps. Same colours as the app. A sixty-second talk: we saw this, we tried that, it failed because, we changed it, here is the number. Live demo, plus a labelled recording.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="avoid">
+      <p class="kicker">Protect the entry</p>
+      <h2>Leave these lanes alone</h2>
+      <div class="lanes">
+        <article class="lane">
+          <h3>The four projects already on the table</h3>
+          <p>A parking meter with plate recognition, a grip-strength ball, a backpack camera, a tree tilt-and-wind alarm. Judges saw them in 2025–26. Use their shape. Build a different problem.</p>
+        </article>
+        <article class="lane">
+          <h3>Diagnosis and surveillance</h3>
+          <p>Claims to detect sarcopenia, depression, food poisoning, or “bad behaviour.” Cameras on classmates. Public rankings of who drank less or whose bag looks heavy. Measure a condition of a place or a task, inform an adult, and keep the person’s dignity in the interface.</p>
+        </article>
+        <article class="lane">
+          <h3>A dashboard with nobody in it</h3>
+          <p>Six charts, no decision, no user test. Vibe coding makes this the easiest thing to generate and the easiest thing to see through. One screen, one action, one log of people using it.</p>
+        </article>
+        <article class="lane">
+          <h3>The on-chip temperature, and a wireless-only demo</h3>
+          <p>micro:bit’s built-in temperature is the processor. A Bluetooth demo with no cable will fail on a noisy fair floor. Measure with the right sensor. Present with a cable. Label any recorded run.</p>
+        </article>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="colophon">
+  <div class="wrap">
+    <p><strong>Sources.</strong> Project descriptions for Park &amp; Easy Toll, Grip the Health, Schoolbag Monitor, and TreeWatch follow the notes supplied for this briefing. Award weights follow the Hong Kong Science Fair 2026–27 criteria supplied with those notes. The Most Popular Award for TreeWatch, and the public account of the gold team’s street origin, interviews, NFC backup, and three prototypes, are from coverage of the Fifth Hong Kong Science Fair.</p>
+    <ol>
+      <li>Sino Group, “The Fifth Hong Kong Science Fair Attracts Over 60,000 Visits,” 28 June 2026. TreeWatch named primary Most Popular Award by on-site vote. Gold in the primary division named as Park &amp; Easy Toll.</li>
+      <li>Homemory, report on 街泊路路通, 3 September 2026. Heung Wo Street origin, driver and parent interviews, camera failures, NFC modelled on a student card, about three prototypes.</li>
+      <li>Environmental Protection Department, Indoor Air Quality Certification Scheme objectives: 8-hour CO2 800 ppmv (Excellent) and 1,000 ppmv (Good) for offices and public places. A classroom spot reading is not that test.</li>
+      <li>Centre for Food Safety, temperature danger zone 4°C to 60°C, and the 2-hour / 4-hour rule for high-risk food.</li>
+      <li>Hong Kong Observatory, current Hot Weather and Very Hot Weather Warning pages — quote the live criteria in the report rather than a remembered number.</li>
+    </ol>
+    <p>Suggested projects are starting points for school teams. They are not entered work. Check the year’s official guide for page limits, division eligibility, and dates before you submit.</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var buttons = document.querySelectorAll(".filters button");
+    var cards = document.querySelectorAll(".idea");
+    buttons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        var filter = button.getAttribute("data-filter");
+        buttons.forEach(function (b) { b.setAttribute("aria-pressed", b === button ? "true" : "false"); });
+        cards.forEach(function (card) {
+          var tags = card.getAttribute("data-tags") || "";
+          var show = filter === "all" || tags.split(" ").indexOf(filter) !== -1;
+          card.hidden = !show;
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>

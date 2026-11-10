@@ -1,1 +1,122 @@
-testing
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hong Kong Science Fair PYP</title>
+<meta name="description" content="Shared pages for the Hong Kong Science Fair primary-years project.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,480;6..72,620&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4efe6;
+    --ink: #1b1914;
+    --muted: #5c564c;
+    --line: #e3d9c8;
+    --forest: #142420;
+    --ember: #b8431f;
+    --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
+    --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
+  .hero {
+    background:
+      radial-gradient(800px 360px at 100% -20%, rgba(232, 168, 92, 0.22), transparent 55%),
+      linear-gradient(165deg, var(--forest), #243f38);
+    color: #f6f1e7;
+    padding: 3.2rem 1.4rem 3.4rem;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; }
+  .eyebrow {
+    margin: 0 0 0.8rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #d7c4a2;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-weight: 480;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.8rem;
+    max-width: 14ch;
+  }
+  .deck { margin: 0; max-width: 38rem; color: #efe6d6; font-size: 1.1rem; }
+  main { padding: 1.6rem 1.4rem 3.5rem; }
+  .pages { display: grid; gap: 0.8rem; }
+  .page {
+    display: block;
+    text-decoration: none;
+    background: #fffdf9;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1.15rem 1.2rem 1.2rem;
+    box-shadow: 0 18px 40px rgba(28, 24, 16, 0.06);
+  }
+  .page:hover { border-color: #cfc3ae; }
+  .kicker {
+    margin: 0 0 0.35rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ember);
+    font-weight: 680;
+  }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 620;
+    font-size: 1.7rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.4rem;
+  }
+  p { margin: 0.3rem 0; color: var(--muted); }
+  .go { color: var(--ink); font-weight: 560; }
+  footer {
+    padding: 0 1.4rem 2rem;
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Hong Kong Science Fair · shared pages</p>
+    <h1>Primary years, one folder.</h1>
+    <p class="deck">Pages for the team working on the Hong Kong Science Fair. Each HTML file sits next to this index so anyone can open the site from the repository.</p>
+  </div>
+</header>
+<main>
+  <div class="wrap pages">
+    <a class="page" href="science-fair-ideas.html">
+      <p class="kicker">Briefing</p>
+      <h2>Winners, and what to build next</h2>
+      <p>What the primary winners of the Fifth Hong Kong Science Fair actually did, and six project directions for students who are strong at interface design and who build apps and games with micro:bit and Arduino. Read against the 2026–27 award criteria.</p>
+      <p class="go">Open the briefing</p>
+    </a>
+    <a class="page" href="hksf-playlist-ideas.html">
+      <p class="kicker">ELCHK LUAC · 題目研究</p>
+      <h2>Playlist ideas for the primary team</h2>
+      <p>A briefing for 基督教香港信義會呂祥光中學附屬小學. It uses the 2025–26 primary shortlist films as a source of ideas, checks them against the 2026–27 rules, and suggests projects a micro:bit game or app team can actually build.</p>
+      <p class="go">Open the briefing</p>
+    </a>
+  </div>
+</main>
+<footer>
+  <div class="wrap">Add the next page as an HTML file in this folder, then link it from this index.</div>
+</footer>
+</body>
+</html>
