@@ -3,120 +3,119 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hong Kong Science Fair PYP</title>
-<meta name="description" content="Shared pages for the Hong Kong Science Fair primary-years project.">
+<title>Hong Kong Science Fair · ELCHK LUAC Primary Prep</title>
+<meta name="description" content="Site and materials for ELCHK LUAC Primary Hong Kong Science Fair 2026–27 prep: Stage 1 examples, winners briefing, playlist ideas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,480;6..72,620&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --paper: #f4efe6;
-    --ink: #1b1914;
-    --muted: #5c564c;
-    --line: #e3d9c8;
-    --forest: #142420;
-    --ember: #b8431f;
-    --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
-    --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 17px;
-    line-height: 1.5;
-  }
-  a { color: inherit; }
-  :focus-visible { outline: 2px solid var(--ember); outline-offset: 3px; }
-  .hero {
-    background:
-      radial-gradient(800px 360px at 100% -20%, rgba(232, 168, 92, 0.22), transparent 55%),
-      linear-gradient(165deg, var(--forest), #243f38);
-    color: #f6f1e7;
-    padding: 3.2rem 1.4rem 3.4rem;
-  }
-  .wrap { max-width: 880px; margin: 0 auto; }
-  .eyebrow {
-    margin: 0 0 0.8rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #d7c4a2;
-  }
-  h1 {
-    font-family: var(--serif);
-    font-weight: 480;
-    font-size: clamp(2.4rem, 6vw, 4rem);
-    line-height: 1.02;
-    letter-spacing: -0.03em;
-    margin: 0 0 0.8rem;
-    max-width: 14ch;
-  }
-  .deck { margin: 0; max-width: 38rem; color: #efe6d6; font-size: 1.1rem; }
-  main { padding: 1.6rem 1.4rem 3.5rem; }
-  .pages { display: grid; gap: 0.8rem; }
-  .page {
-    display: block;
-    text-decoration: none;
-    background: #fffdf9;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    padding: 1.15rem 1.2rem 1.2rem;
-    box-shadow: 0 18px 40px rgba(28, 24, 16, 0.06);
-  }
-  .page:hover { border-color: #cfc3ae; }
-  .kicker {
-    margin: 0 0 0.35rem;
-    font-size: 0.75rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--ember);
-    font-weight: 680;
-  }
-  h2 {
-    font-family: var(--serif);
-    font-weight: 620;
-    font-size: 1.7rem;
-    letter-spacing: -0.02em;
-    margin: 0 0 0.4rem;
-  }
-  p { margin: 0.3rem 0; color: var(--muted); }
-  .go { color: var(--ink); font-weight: 560; }
-  footer {
-    padding: 0 1.4rem 2rem;
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-<header class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Hong Kong Science Fair · shared pages</p>
-    <h1>Primary years, one folder.</h1>
-    <p class="deck">Pages for the team working on the Hong Kong Science Fair. Each HTML file sits next to this index so anyone can open the site from the repository.</p>
-  </div>
-</header>
-<main>
-  <div class="wrap pages">
-    <a class="page" href="science-fair-ideas.html">
-      <p class="kicker">Briefing</p>
-      <h2>Winners, and what to build next</h2>
-      <p>What the primary winners of the Fifth Hong Kong Science Fair actually did, and six project directions for students who are strong at interface design and who build apps and games with micro:bit and Arduino. Read against the 2026–27 award criteria.</p>
-      <p class="go">Open the briefing</p>
+<a class="skip" href="#content">Skip to content</a>
+<div class="backdrop" data-nav-backdrop hidden></div>
+<div class="app">
+  <aside class="sidebar" id="site-nav" aria-label="Site navigation">
+    <a class="brand-block" href="index.html">
+      <p class="brand-kicker">HKSF 2026–27 · Primary</p>
+      <p class="brand-title">ELCHK LUAC Prep</p>
+      <p class="brand-school">基督教香港信義會呂祥光中學附屬小學</p>
     </a>
-    <a class="page" href="hksf-playlist-ideas.html">
-      <p class="kicker">ELCHK LUAC · 題目研究</p>
-      <h2>Playlist ideas for the primary team</h2>
-      <p>A briefing for 基督教香港信義會呂祥光中學附屬小學. It uses the 2025–26 primary shortlist films as a source of ideas, checks them against the 2026–27 rules, and suggests projects a micro:bit game or app team can actually build.</p>
-      <p class="go">Open the briefing</p>
-    </a>
+    <div class="nav-group" aria-label="Pages">
+      <p class="nav-label">Pages</p>
+      <a class="is-active" href="index.html" aria-current="page">Home hub</a>
+      <a href="stage1-examples.html">Stage 1 examples</a>
+      <a href="science-fair-ideas.html">Winners briefing</a>
+      <a href="hksf-playlist-ideas.html">Playlist briefing</a>
+    </div>
+    <div class="nav-group" aria-label="On this page">
+      <p class="nav-label">On this page</p>
+      <a class="sub" href="#start">Where to start</a>
+      <a class="sub" href="#pages">All pages</a>
+      <a class="sub" href="#dates">Key dates</a>
+    </div>
+    <p class="nav-note">Use the left panel to move between pages and sections. Content is split across pages — not one endless scroll.</p>
+  </aside>
+
+  <div class="content">
+    <div class="shell-top">
+      <button type="button" class="menu-btn" data-nav-toggle aria-controls="site-nav" aria-expanded="false">Menu</button>
+      <span class="page-label">Home hub</span>
+    </div>
+
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Hong Kong Science Fair · Primary prep hub</p>
+        <h1>ELCHK LUAC Primary.</h1>
+        <p class="deck">Shared site for teachers and teams strong at <em>games / apps with micro:bit as controller</em>. Start with Stage 1 fill-in examples, then read the winners and playlist briefs when you need depth.</p>
+      </div>
+    </header>
+
+    <main class="main" id="content">
+      <div class="wrap">
+        <section class="panel" id="start">
+          <p class="kicker">This week</p>
+          <h2>Where to start</h2>
+          <div class="callout">
+            <strong>Stage 1 first.</strong>
+            Application fields are short: Project Name CN/EN, Theme, Expected Beneficiary, Inspiration CN (~120–150 characters) and EN (~50–70 words). Full I/O and design pipeline wait for Stage 2.
+          </div>
+          <p><a href="stage1-examples.html"><b>Open Stage 1 examples →</b></a> Six diversified packs (classmates, children, family, disability, public, elderly as one option).</p>
+        </section>
+
+        <section class="panel" id="pages">
+          <p class="kicker">Site map</p>
+          <h2>All pages</h2>
+          <div class="card-grid two">
+            <a class="page-card" href="stage1-examples.html">
+              <p class="kicker">Application</p>
+              <h3>Stage 1 form examples</h3>
+              <p class="muted">Copy-ready CN/EN names, theme, beneficiary, inspiration snippets, and teacher notes on Stage 1 vs Stage 2.</p>
+              <p class="go">Open examples</p>
+            </a>
+            <a class="page-card" href="science-fair-ideas.html">
+              <p class="kicker">Briefing</p>
+              <h3>Winners, and what to build</h3>
+              <p class="muted">Primary winners pattern, criteria, and project directions for interface + micro:bit / Arduino teams.</p>
+              <p class="go">Open winners briefing</p>
+            </a>
+            <a class="page-card" href="hksf-playlist-ideas.html">
+              <p class="kicker">ELCHK LUAC · 題目研究</p>
+              <h3>Playlist ideas briefing</h3>
+              <p class="muted">2025–26 primary shortlist as inspiration library, fit check for micro:bit game/app skills, form tips.</p>
+              <p class="go">Open playlist briefing</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="panel" id="dates">
+          <p class="kicker">2026–27</p>
+          <h2>Key dates &amp; judging</h2>
+          <ul>
+            <li><b>Stage 1</b> application: on or before <b>29 Nov 2026</b></li>
+            <li><b>Stage 2</b> project proposal: on or before <b>28 Feb 2027</b></li>
+          </ul>
+          <table>
+            <thead><tr><th>Primary criterion</th><th>Weight</th></tr></thead>
+            <tbody>
+              <tr><td>Problem</td><td>20%</td></tr>
+              <tr><td>Creativity</td><td>30%</td></tr>
+              <tr><td>Design &amp; Validation</td><td>20%</td></tr>
+              <tr><td>Benefits</td><td>20%</td></tr>
+              <tr><td>Presentation</td><td>10%</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+
+    <footer class="colophon">
+      <div class="wrap">Relative links stay in this folder. Mobile: use Menu to open the left panel.</div>
+    </footer>
   </div>
-</main>
-<footer>
-  <div class="wrap">Add the next page as an HTML file in this folder, then link it from this index.</div>
-</footer>
+</div>
+<script>
+  document.querySelector("[data-nav-backdrop]").hidden = false;
+</script>
+<script src="site.js"></script>
 </body>
 </html>

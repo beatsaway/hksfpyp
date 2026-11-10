@@ -4,144 +4,76 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>香港創科展 2026-2027｜小學組題目研究簡報（ELCHK LUAC）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,480;0,6..72,620;1,6..72,480&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 <style>
-:root{
-  --bg:#f3efe6;
-  --bg2:#e7eef0;
-  --ink:#1c2a2e;
-  --muted:#4a5c62;
-  --card:#fffdf8;
-  --line:#c9d3d6;
-  --accent:#0f6a6a;
-  --accent2:#c45c26;
-  --ok:#1f6b3a;
-  --warn:#8a5a00;
-  --chip:#dce8e8;
-  --shadow:0 10px 30px rgba(28,42,46,.08);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  color:var(--ink);
-  font-family:"Avenir Next","Segoe UI","PingFang TC","Noto Sans TC","Helvetica Neue",sans-serif;
-  line-height:1.55;
-  background:
-    radial-gradient(1200px 500px at 10% -10%, #d7ebea 0%, transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, #f7e2d3 0%, transparent 50%),
-    linear-gradient(180deg, var(--bg), var(--bg2) 40%, #eef3f1 100%);
-}
-body:before{
-  content:"";
-  position:fixed; inset:0; pointer-events:none; opacity:.35;
-  background-image:linear-gradient(rgba(15,106,106,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15,106,106,.04) 1px, transparent 1px);
-  background-size:28px 28px;
-}
-.wrap{max-width:1100px;margin:0 auto;padding:28px 18px 80px;position:relative}
-header.hero{
-  padding:28px 0 18px;
-  border-bottom:1px solid var(--line);
-  margin-bottom:28px;
-}
-.brand{
-  font-family:Georgia,"Songti TC","Noto Serif TC",serif;
-  font-size:clamp(1.8rem,4vw,2.6rem);
-  letter-spacing:.02em;
-  margin:0 0 .35rem;
-  color:var(--accent);
-}
-.sub{color:var(--muted);max-width:46rem;margin:0 0 1rem}
-.meta{display:flex;flex-wrap:wrap;gap:.5rem}
-.chip{
-  background:var(--chip);color:var(--ink);border:1px solid var(--line);
-  border-radius:999px;padding:.25rem .7rem;font-size:.85rem;
-}
-nav.toc{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-  gap:.6rem;margin:1.2rem 0 0;
-}
-nav.toc a{
-  text-decoration:none;color:var(--ink);background:var(--card);
-  border:1px solid var(--line);padding:.7rem .85rem;border-radius:10px;
-  box-shadow:var(--shadow);font-size:.92rem;
-}
-nav.toc a:hover{border-color:var(--accent);color:var(--accent)}
-section{
-  background:var(--card);border:1px solid var(--line);border-radius:16px;
-  padding:1.25rem 1.25rem 1.4rem;margin:1.1rem 0;box-shadow:var(--shadow);
-}
-h2{
-  font-family:Georgia,"Songti TC","Noto Serif TC",serif;
-  margin:0 0 .8rem;font-size:1.45rem;color:var(--accent);
-  border-bottom:2px solid #b7d4d4;padding-bottom:.35rem;
-}
-h3{margin:1.1rem 0 .4rem;font-size:1.08rem}
-p,li{color:var(--ink)}
-.muted{color:var(--muted)}
+.rec{border:1px solid var(--line);border-radius:12px;padding:1rem;margin:.8rem 0;background:linear-gradient(180deg,#fffefb,#f3f8f8)}
+.rec h3{margin-top:0;color:var(--pop)}
+.verdict{background:#12363a;color:#f4fffd;border-radius:14px;padding:1rem 1.1rem;margin:.8rem 0}
+.verdict h3{color:#9de0d8;margin-top:0}
 .grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
 @media(max-width:800px){.grid-2{grid-template-columns:1fr}}
-table{width:100%;border-collapse:collapse;font-size:.92rem}
-th,td{border:1px solid var(--line);padding:.55rem .6rem;text-align:left;vertical-align:top}
-th{background:#e8f2f2}
-.callout{
-  background:linear-gradient(135deg,#e8f6f4,#fff8f1);
-  border-left:4px solid var(--accent2);
-  padding:.9rem 1rem;border-radius:0 12px 12px 0;margin:.8rem 0;
-}
-.callout strong{color:var(--accent2)}
-.verdict{
-  background:#12363a;color:#f4fffd;border-radius:14px;padding:1rem 1.1rem;margin:.8rem 0;
-}
-.verdict h3{color:#9de0d8;margin-top:0}
-.rec{
-  border:1px solid var(--line);border-radius:12px;padding:1rem;margin:.8rem 0;
-  background:linear-gradient(180deg,#fffefb,#f3f8f8);
-}
-.rec h3{margin-top:0;color:var(--accent)}
-.kv{display:grid;grid-template-columns:140px 1fr;gap:.25rem .7rem;font-size:.92rem}
-.kv b{color:var(--muted);font-weight:600}
-.video{
-  border-top:1px dashed var(--line);padding:1rem 0 .4rem;
-}
-.video:first-of-type{border-top:0}
-.video h3{margin:0 0 .35rem;font-size:1.02rem}
-.video a{color:var(--accent);word-break:break-all}
-.badge{
-  display:inline-block;font-size:.75rem;padding:.15rem .45rem;border-radius:6px;
-  border:1px solid var(--line);margin-right:.35rem;background:#f0f6f6;
-}
-.badge.tx{background:#e4f5ea;border-color:#b7dfc2;color:var(--ok)}
+.badge{display:inline-block;font-size:.75rem;padding:.15rem .45rem;border-radius:6px;border:1px solid var(--line);margin-right:.35rem;background:#f0f6f6}
+.badge.tx{background:#e4f5ea;border-color:#b7dfc2;color:var(--good)}
 .badge.no{background:#fff4df;border-color:#efd29a;color:var(--warn)}
 .badge.press{background:#e8eefc;border-color:#c3d0f5;color:#27408b}
-footer{margin-top:2rem;color:var(--muted);font-size:.85rem}
+.video{border:1px solid var(--line);border-radius:12px;padding:.55rem .85rem;margin:.55rem 0;background:var(--paper-2)}
+.video summary{cursor:pointer;color:var(--pop);font-weight:600;padding:.35rem 0}
+.video[open]{padding-bottom:.9rem}
 .small{font-size:.88rem}
-details{margin:.4rem 0}
-summary{cursor:pointer;color:var(--accent);font-weight:600}
+.panel .kv{margin-top:.6rem}
 </style>
 </head>
 <body>
-<div class="wrap">
-<header class="hero">
-  <p class="chip">Hong Kong Science Fair 2026–2027 · Primary Division</p>
-  <h1 class="brand">香港創科展題目研究簡報</h1>
-  <p class="sub">給基督教香港信義會呂祥光中學附屬小學（ELCHK LUAC）小學組隊伍：以 2025–2026 小學組入圍短片為靈感庫，對照 2026–2027 規則，評估 micro:bit 遊戲／App 控制器技能可否參賽，並提出可落地題目建議。</p>
-  <div class="meta">
-    <span class="chip">Playlist：43 videos</span>
-    <span class="chip">Usable captions：20/43</span>
-    <span class="chip">Stage 1：29 Nov 2026</span>
-    <span class="chip">Stage 2：28 Feb 2027</span>
-  </div>
-  <nav class="toc" aria-label="Sections">
-    <a href="#context">1. 比賽背景 Competition</a>
-    <a href="#microbit">2. micro:bit 適配性</a>
-    <a href="#recs">3. 本年推薦題目</a>
-    <a href="#form">4. 報名表格提示</a>
-    <a href="#playlist">5. 短片靈感庫</a>
-  </nav>
-</header>
-
-<section id="context">
+<a class="skip" href="#content">Skip to content</a>
+<div class="backdrop" data-nav-backdrop></div>
+<div class="app">
+  <aside class="sidebar" id="site-nav" aria-label="Site navigation">
+    <a class="brand-block" href="index.html">
+      <p class="brand-kicker">HKSF 2026–27 · Primary</p>
+      <p class="brand-title">ELCHK LUAC Prep</p>
+      <p class="brand-school">基督教香港信義會呂祥光中學附屬小學</p>
+    </a>
+    <div class="nav-group" aria-label="Pages">
+      <p class="nav-label">Pages</p>
+      <a href="index.html">Home hub</a>
+      <a href="stage1-examples.html">Stage 1 examples</a>
+      <a href="science-fair-ideas.html">Winners briefing</a>
+      <a href="hksf-playlist-ideas.html" class="is-active" aria-current="page">Playlist briefing</a>
+    </div>
+    <div class="nav-group" aria-label="On this page">
+      <p class="nav-label">On this page</p>
+      <a class="sub" href="#context">1. Competition</a>
+      <a class="sub" href="#microbit">2. micro:bit fit</a>
+      <a class="sub" href="#recs">3. Recommended topics</a>
+      <a class="sub" href="#form">4. Form tips</a>
+      <a class="sub" href="#playlist">5. Playlist library</a>
+    </div>
+    <p class="nav-note">短片預設收合。申請填表請用 Stage 1 examples 頁。</p>
+  </aside>
+  <div class="content">
+    <div class="shell-top">
+      <button type="button" class="menu-btn" data-nav-toggle aria-controls="site-nav" aria-expanded="false">Menu</button>
+      <span class="page-label">Playlist briefing</span>
+    </div>
+    <header class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Hong Kong Science Fair 2026–2027 · Primary Division</p>
+        <h1>香港創科展題目研究簡報</h1>
+        <p class="deck">給 ELCHK LUAC 小學組：以 2025–26 入圍短片為靈感庫，對照 2026–27 規則，評估 micro:bit 遊戲／App 控制器技能，並連到 <em>Stage 1</em> 填表示例。</p>
+        <div class="chip-row">
+          <span class="chip">Playlist：43 videos</span>
+          <span class="chip">Stage 1：29 Nov 2026</span>
+          <span class="chip">Stage 2：28 Feb 2027</span>
+        </div>
+        <p style="margin:1rem 0 0;font-size:.92rem;color:#d7c4a2"><a href="stage1-examples.html" style="color:#fff">Stage 1 examples</a> · <a href="science-fair-ideas.html" style="color:#fff">Winners briefing</a> · <a href="index.html" style="color:#fff">Home</a></p>
+      </div>
+    </header>
+    <main class="main" id="content">
+      <div class="wrap">
+<section class="panel" id="context">
   <h2>1. 小學組比賽背景｜Primary Division context (2026–2027)</h2>
   <div class="grid-2">
     <div>
@@ -185,8 +117,7 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
     入圍作品幾乎都扣住「真實用家＋可演示原型」：長者跌倒／肌少症、火警逃生、泊車流轉、書包過重、回收分類、樹木傾倒預警等。金獎「街泊路路通」與銅獎「書包 Idol」都強調反覆測試與改良；「握住健康」證明 <b>micro:bit + 遊戲化</b> 可以很有競爭力——前提是服務真實健康需要。
   </div>
 </section>
-
-<section id="microbit">
+<section class="panel" id="microbit">
   <h2>2. micro:bit 遊戲／App 技能適配嗎？｜Honest fit check</h2>
   <div class="verdict">
     <h3>簡答 Short answer</h3>
@@ -205,72 +136,73 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
   </table>
   <p class="small muted">紅線：不要只提交「校園打機作品」。綠燈：遊戲／App = 介面；micro:bit = 控制器／感應器；核心是社區問題 + 原型 + 證據。</p>
 </section>
-<section id="recs"><h2>3. 本年推薦題目｜Concrete topics for ELCHK LUAC</h2><p class="muted">假設隊伍強項是 <b>micro:bit 遊戲／App 作控制器</b>。下列題目都刻意保留遊戲化，但綁定真實受惠者與可做原型。</p>
+<section class="panel" id="recs"><h2>3. 本年推薦題目｜Concrete topics for ELCHK LUAC</h2>
+<p class="muted">假設隊伍強項是 <b>micro:bit 遊戲／App 作控制器</b>。下列題目保留遊戲化，但綁定真實受惠者。完整 Stage 1 中英填表示例見 <a href="stage1-examples.html">Stage 1 examples</a>——受惠對象已刻意分散，避免全校只做長者／認知障礙。</p>
     <div class="rec">
-      <h3>1. 握力復康小機：長者肌少症訓練器</h3>
-      <p class="small muted">GripQuest — Sarcopenia Training Controller</p>
-      <div class="kv">
-        <b>Theme</b><span>Medical &amp; Healthcare</span>
-        <b>Beneficiary</b><span>The elderly；可兼 Chronic patients</span>
-        <b>Why this year</b><span>最直接沿用 micro:bit＋遊戲技能；對標上年「握住健康」。壓力／力傳感器 + MakeCode/Scratch 訓練關卡 + 可換阻力。評分：Creativity（遊戲化）+ Benefits（肌力／血壓敘事）+ Validation（前後握力數據）。</span>
-        <b>Name example</b><span>「力力更生」GripQuest <span class="muted">（中英對照、短而記得住）</span></span>
-      </div>
-    </div>
-    <div class="rec">
-      <h3>2. 坐姿腳位小偵探：課堂護脊提醒</h3>
+      <h3>1. 坐姿腳位小偵探：課堂護脊提醒</h3>
       <p class="small muted">FootRight — Classroom Sitting Coach</p>
       <div class="kv">
-        <b>Theme</b><span>Education（可兼 Medical）</span>
+        <b>Theme</b><span>Education</span>
         <b>Beneficiary</b><span>Teenagers/Student；Children；Family</span>
-        <b>Why this year</b><span>對標「iSitWell」。椅腳／踏板壓力或距離感應 + micro:bit 提醒 + 課堂小遊戲獎勵正確腳位。易在本校取樣驗證。</span>
-        <b>Name example</b><span>「腳踏實學」FootRight Coach <span class="muted">（中英對照、短而記得住）</span></span>
+        <b>Why this year</b><span>本校易取樣。椅腳／踏板壓力 + micro:bit 提醒 + 課堂小遊戲。評分：Problem（課堂觀察）+ Validation（前後測）。</span>
+        <b>Name example</b><span>「腳踏實學」FootRight Coach</span>
       </div>
     </div>
     <div class="rec">
-      <h3>3. 記憶關卡伴侶：認知刺激＋日常提示</h3>
-      <p class="small muted">MemoMate — Cognitive Play Companion</p>
-      <div class="kv">
-        <b>Theme</b><span>Medical &amp; Healthcare / Smart Living</span>
-        <b>Beneficiary</b><span>The elderly；Chronic patients；Family</span>
-        <b>Why this year</b><span>對標「記憶守護者」但降難度：micro:bit 按鈕／LED 做配對記憶與服藥／飲水提示，家屬可看簡單紀錄。強調陪伴而非醫療宣稱。</span>
-        <b>Name example</b><span>「記住你」MemoMate <span class="muted">（中英對照、短而記得住）</span></span>
-      </div>
-    </div>
-    <div class="rec">
-      <h3>4. 回收分類教練車：玩完即分類</h3>
+      <h3>2. 回收分類教練車：玩完即分類</h3>
       <p class="small muted">SortRover — Learn-then-Sort micro:bit Robot</p>
       <div class="kv">
         <b>Theme</b><span>Sustainability</span>
-        <b>Beneficiary</b><span>Children；Teenagers/Student；General Public</span>
-        <b>Why this year</b><span>對標 RecycleGPT／廚餘助手。先用 App 遊戲學分類，再用 micro:bit Maqueen／線循車把物品送到正確回收區——技能完全對口，演示極強。</span>
-        <b>Name example</b><span>「分得清」SortRover <span class="muted">（中英對照、短而記得住）</span></span>
+        <b>Beneficiary</b><span>Children；General Public；Teenagers/Student</span>
+        <b>Why this year</b><span>App 遊戲學分類 + micro:bit Maqueen 送到正確格——演示強、受惠非長者。</span>
+        <b>Name example</b><span>「分得清」SortRover</span>
       </div>
     </div>
     <div class="rec">
-      <h3>5. 家居逃生演練手掣：火警決策小訓練</h3>
-      <p class="small muted">EscapeDrill — Fire Decision Trainer</p>
-      <div class="kv">
-        <b>Theme</b><span>Smart Living / Creative Solutions</span>
-        <b>Beneficiary</b><span>Family；Children；The elderly；People with disability（可加震動／燈光模式）</span>
-        <b>Why this year</b><span>火警主題上年極多，要差異化：不要只做感應警報，改做「家庭演練＋決策訓練」手掣（煙霧情境卡 + micro:bit 選擇正確路線），再加簡易門磁／溫度演示。</span>
-        <b>Name example</b><span>「走寶」EscapeDrill <span class="muted">（中英對照、短而記得住）</span></span>
-      </div>
-    </div>
-    <div class="rec">
-      <h3>6. 書包姿勢關卡：過重／寒背雙提醒</h3>
+      <h3>3. 書包姿勢關卡：過重／寒背雙提醒</h3>
       <p class="small muted">BagBuddy — Posture &amp; Load School Coach</p>
       <div class="kv">
-        <b>Theme</b><span>Education / Smart Living</span>
-        <b>Beneficiary</b><span>Teenagers/Student；Children</span>
-        <b>Why this year</b><span>對標書包 Idol，但用 micro:bit 加速度／拉力近似偵測 + 遊戲化每週挑戰，較易以現有技能落地；在校門做測試即可取 Validation。</span>
-        <b>Name example</b><span>「背得輕」BagBuddy <span class="muted">（中英對照、短而記得住）</span></span>
+        <b>Theme</b><span>Smart Living</span>
+        <b>Beneficiary</b><span>Children；Teenagers/Student</span>
+        <b>Why this year</b><span>對標書包 Idol，用加速度／拉力 + 每週挑戰遊戲；校門測試即可。</span>
+        <b>Name example</b><span>「背得輕」BagBuddy</span>
       </div>
     </div>
-  <div class="callout"><strong>選題建議：</strong>若時間緊，優先 <b>#1 握力</b> 或 <b>#2 坐姿</b>（驗證容易、技能匹配最高）。想突出機械演示可選 <b>#4 回收車</b>。火警題競爭激烈，只有在「演練／共融」有獨特角度才建議。</div>
+    <div class="rec">
+      <h3>4. 家居逃生演練手掣：火警決策小訓練</h3>
+      <p class="small muted">EscapeDrill — Fire Decision Trainer</p>
+      <div class="kv">
+        <b>Theme</b><span>Creative Solutions</span>
+        <b>Beneficiary</b><span>Family；Children；People with disability</span>
+        <b>Why this year</b><span>差異化：演練＋決策＋震動／燈光共融，不是又一款純警報。</span>
+        <b>Name example</b><span>「走寶」EscapeDrill</span>
+      </div>
+    </div>
+    <div class="rec">
+      <h3>5. 拍拍節奏同行：共融練習控制器</h3>
+      <p class="small muted">BeatBuddy — Rhythm Practice Controller</p>
+      <div class="kv">
+        <b>Theme</b><span>Education</span>
+        <b>Beneficiary</b><span>People with disability；Children；Family</span>
+        <b>Why this year</b><span>按鈕／加速度正是隊伍強項；受惠清晰且避開 dementia-only 撞車。</span>
+        <b>Name example</b><span>「拍拍同行」BeatBuddy</span>
+      </div>
+    </div>
+    <div class="rec">
+      <h3>6. 握力復康小機：長者肌少症訓練（選項之一）</h3>
+      <p class="small muted">GripQuest — Sarcopenia Training Controller</p>
+      <div class="kv">
+        <b>Theme</b><span>Medical &amp; Healthcare</span>
+        <b>Beneficiary</b><span>The elderly；Family</span>
+        <b>Why this year</b><span>技能最贴「握住健康」。長者只是多元受惠中的一路——不要全校只走這條／認知障礙敘事。</span>
+        <b>Name example</b><span>「力力更生」GripQuest</span>
+      </div>
+    </div>
+  <div class="callout"><strong>選題建議：</strong>時間緊優先 <b>#1 坐姿</b>、<b>#2 回收車</b> 或 <b>#3 書包</b>。GripQuest 可留一隊。填表字數與中英範例見 <a href="stage1-examples.html">Stage 1 examples</a>。</div>
 </section>
-
-<section id="form">
+<section class="panel" id="form">
   <h2>4. 申請表欄位提示｜Application-form field tips</h2>
+  <div class="callout"><strong>Stage 1 ≠ Stage 2。</strong> 此階段只要名稱、主題、受惠對象、靈感中英短文。完整 I/O／設計管線／驗證計劃屬 Stage 2。可直接複製改寫：<a href="stage1-examples.html">Stage 1 填表示例（六套）</a>。</div>
   <h3>中／英項目名稱 Project name</h3>
   <ul>
     <li>格式參考入圍作品：<b>中文名 + English name</b>（可含輕微雙關，但要一讀就懂受惠對象／功能）。</li>
@@ -297,13 +229,12 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
     </tbody>
   </table>
   <p class="small muted">中英應同義，不要英文只翻譯口號；兩邊都要有「真實觀察」一句。</p>
-  <h3>迷你範例（握力題）</h3>
-  <p><b>中文靈感（約140字）：</b>我們探訪社區長者時發現，不少公公婆婆因肌力下降而打不開瓶蓋，又覺得復康訓練枯燥而難以堅持。參考醫療上「握力反映整體健康」的說法，我們想用 micro:bit 感測握力，做成可換阻力的訓練遊戲，讓長者在玩樂中完成每日短訓練，並記錄進度給家人參考，希望提升依從性與生活自信。</p>
-  <p><b>English (~60 words):</b> After visiting local elders, we noticed weaker grip made daily tasks hard, yet rehab felt boring. Using a micro:bit grip sensor and a simple training game with adjustable resistance, we aim to help elders practise short daily sessions, track progress for families, and improve adherence—not just entertainment.</p>
+  <h3>迷你範例</h3>
+  <p class="small muted">握力／坐姿／回收等完整中英靈感字數示例已移至 <a href="stage1-examples.html">stage1-examples.html</a>（含非長者受惠題）。</p>
 </section>
-
-<section id="playlist">
+<section class="panel" id="playlist">
   <h2>5. 短片靈感庫｜2025–2026 Primary finalist playlist</h2>
+  <p class="muted"><b>預設收合。</b>用左側欄跳到本區後，再展開需要的短片——避免單頁無限下拉讀完全部。</p>
   <p>來源播放清單：<a href="https://www.youtube.com/watch?v=4aIPLXx5tcM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">YouTube PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a>（共 43 支）。每卡含主題、技術、為何有競爭力。資料來源標記如下：</p>
   <p>
     <span class="badge tx">transcript</span> 有可用字幕／逐字稿　
@@ -311,8 +242,8 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
     <span class="badge no">title/desc</span> 字幕受阻，依標題／簡介／公開報道推斷
   </p>
 
-  <article class="video" id="v-4aIPLXx5tcM">
-    <h3>01. 2337 記憶守護者 Memory Guardian</h3>
+  <details class="video" id="v-4aIPLXx5tcM"><summary><strong>01. 2337 記憶守護者 Memory Guardian</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=4aIPLXx5tcM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=4aIPLXx5tcM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：油蔴地天主教小學（海泓道）</p>
@@ -322,10 +253,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Camera/AI recognition + reminder UX</span>
       <b>Why competitive</b><span>Strong human-centred story; dementia is a growing HK need; emotional presentation.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-IO7ec3zvj18">
-    <h3>02. 2343 最佳「智」友，「語」你同行！ Speech Buddy</h3>
+  <details class="video" id="v-IO7ec3zvj18"><summary><strong>02. 2343 最佳「智」友，「語」你同行！ Speech Buddy</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=IO7ec3zvj18&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=IO7ec3zvj18&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -335,10 +266,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Likely speech/AI companion app or device</span>
       <b>Why competitive</b><span>Inclusive communication themes score well if paired with real users and a prototype.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-8s-XPij61Fg">
-    <h3>03. 2359 雪櫃&quot;鮮&quot;生 Mr. i-Fridge</h3>
+  <details class="video" id="v-8s-XPij61Fg"><summary><strong>03. 2359 雪櫃&quot;鮮&quot;生 Mr. i-Fridge</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=8s-XPij61Fg&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=8s-XPij61Fg&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：基督教培恩小學</p>
@@ -348,10 +279,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>HuskyLens AI cam + micro:bit + external display</span>
       <b>Why competitive</b><span>Relatable elder food-safety problem; micro:bit demo; iterative upgrade from user testing.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-HMpzwpg2p34">
-    <h3>04. 2360 穩步前行 Steady step</h3>
+  <details class="video" id="v-HMpzwpg2p34"><summary><strong>04. 2360 穩步前行 Steady step</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=HMpzwpg2p34&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=HMpzwpg2p34&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：基督教培恩小學</p>
@@ -361,10 +292,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>micro:bit + proximity/obstacle sensing on footwear</span>
       <b>Why competitive</b><span>Clear stats-backed problem; wearable hardware prototype; elder beneficiary.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-rz5bl4nnH4Y">
-    <h3>05. 2370 握住健康 Grip the Health</h3>
+  <details class="video" id="v-rz5bl4nnH4Y"><summary><strong>05. 2370 握住健康 Grip the Health</strong></summary>
+    
     <span class="badge tx">transcript</span><span class="badge press">press</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=rz5bl4nnH4Y&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=rz5bl4nnH4Y&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：中華基督教會元朗真光小學</p>
@@ -374,10 +305,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>micro:bit + pressure sensor + Scratch gamification</span>
       <b>Why competitive</b><span>Clear human need, measurable training feedback, hardware+app prototype, strong creativity + benefits fit; featured in pre-fair press.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-944As0Xi6y8">
-    <h3>06. 2377 聲中「衣」星 The Dressing Star</h3>
+  <details class="video" id="v-944As0Xi6y8"><summary><strong>06. 2377 聲中「衣」星 The Dressing Star</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=944As0Xi6y8&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=944As0Xi6y8&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：陳瑞祺（喇沙）小學</p>
@@ -387,10 +318,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Likely voice UI + clothing guidance</span>
       <b>Why competitive</b><span>Accessibility + daily living can be competitive if validated with users.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-nFsYplfHd0s">
-    <h3>07. 2403 綠色守護者 - 路燈空氣淨化系統 EcoDefender</h3>
+  <details class="video" id="v-nFsYplfHd0s"><summary><strong>07. 2403 綠色守護者 - 路燈空氣淨化系統 EcoDefender</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=nFsYplfHd0s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=nFsYplfHd0s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：青山天主教小學</p>
@@ -400,10 +331,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Streetlight-integrated air cleaning/monitoring IoT</span>
       <b>Why competitive</b><span>Public infrastructure angle; sustainability theme; needs solid prototype + data.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-SwSBHjxx1RE">
-    <h3>08. 2420 RFID 智慧引路徑 RFID Smart Guide Path</h3>
+  <details class="video" id="v-SwSBHjxx1RE"><summary><strong>08. 2420 RFID 智慧引路徑 RFID Smart Guide Path</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=SwSBHjxx1RE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=SwSBHjxx1RE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：優才（楊殷有娣）書院</p>
@@ -413,10 +344,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>RFID tags/readers + guidance feedback</span>
       <b>Why competitive</b><span>Inclusive design; tangible path demo; clear beneficiary.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-KsJmX5sLQtA">
-    <h3>09. 2421 智舒展：居家智慧服健助手 SmartStretch</h3>
+  <details class="video" id="v-KsJmX5sLQtA"><summary><strong>09. 2421 智舒展：居家智慧服健助手 SmartStretch</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=KsJmX5sLQtA&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=KsJmX5sLQtA&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -426,10 +357,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Likely sensors + guided exercise app/hardware</span>
       <b>Why competitive</b><span>Home health adherence is a strong need; fits creativity + benefits if measurable.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-KME_6fLhTWo">
-    <h3>10. 2507 行行出狀元 Stroke Champs</h3>
+  <details class="video" id="v-KME_6fLhTWo"><summary><strong>10. 2507 行行出狀元 Stroke Champs</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=KME_6fLhTWo&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=KME_6fLhTWo&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：保良局馮晴紀念小學</p>
@@ -439,10 +370,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Embodied/game-based learning system (body-as-input)</span>
       <b>Why competitive</b><span>Creative pedagogy; children beneficiary; strong presentation potential—frame as learning need not pure fun.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-qLhsMEnw8zY">
-    <h3>11. 2509 街泊路路通 Park &amp; Easy Toll</h3>
+  <details class="video" id="v-qLhsMEnw8zY"><summary><strong>11. 2509 街泊路路通 Park &amp; Easy Toll</strong></summary>
+    
     <span class="badge tx">transcript</span><span class="badge press">press</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=qLhsMEnw8zY&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=qLhsMEnw8zY&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：天水圍循道衛理小學</p>
@@ -452,10 +383,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>AI vision, NFC, progressive pricing prototype</span>
       <b>Why competitive</b><span>Real street problem, iterated prototypes, dual ID fallback; won Primary Gold — strong design &amp; validation story.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-Yhv9xjxRFgE">
-    <h3>12. 2540 智能污衣籃 Smart Laundry Basket</h3>
+  <details class="video" id="v-Yhv9xjxRFgE"><summary><strong>12. 2540 智能污衣籃 Smart Laundry Basket</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=Yhv9xjxRFgE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=Yhv9xjxRFgE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -465,10 +396,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Sensors + sorting/notification prototype</span>
       <b>Why competitive</b><span>Everyday family pain point; feasible primary prototype.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-WIMT6T2iUJw">
-    <h3>13. 2545 大型災害急救箱 Intelligent Disaster First Aid Kit</h3>
+  <details class="video" id="v-WIMT6T2iUJw"><summary><strong>13. 2545 大型災害急救箱 Intelligent Disaster First Aid Kit</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=WIMT6T2iUJw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=WIMT6T2iUJw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：英皇書院同學會小學</p>
@@ -478,10 +409,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Guided first-aid kit UI + GPS</span>
       <b>Why competitive</b><span>Disaster readiness is timely; clear demo of guided use + location.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-aGU7PrcSh50">
-    <h3>14. 2551 聲著 clothmate</h3>
+  <details class="video" id="v-aGU7PrcSh50"><summary><strong>14. 2551 聲著 clothmate</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=aGU7PrcSh50&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=aGU7PrcSh50&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：油蔴地天主教小學（海泓道）</p>
@@ -491,10 +422,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Colour/outfit sensing + voice guidance</span>
       <b>Why competitive</b><span>Strong accessibility narrative; family/disability beneficiaries.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-hA3Hu2UDKqw">
-    <h3>15. 2580 「智引求生」火災逃生系統 i-Escape</h3>
+  <details class="video" id="v-hA3Hu2UDKqw"><summary><strong>15. 2580 「智引求生」火災逃生系統 i-Escape</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=hA3Hu2UDKqw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=hA3Hu2UDKqw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：英皇書院同學會小學第二校</p>
@@ -504,10 +435,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Sensors + escape guidance UI</span>
       <b>Why competitive</b><span>Same hot theme as other fire projects; differentiate with testing &amp; unique UX.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-btEIQ75OCt4">
-    <h3>16. 2590 書包Idol Schoolbag monitor</h3>
+  <details class="video" id="v-btEIQ75OCt4"><summary><strong>16. 2590 書包Idol Schoolbag monitor</strong></summary>
+    
     <span class="badge tx">transcript</span><span class="badge press">press</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=btEIQ75OCt4&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=btEIQ75OCt4&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：聖公會青衣邨何澤芸小學</p>
@@ -517,10 +448,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>AI pose/image recognition, display + speaker, 3D housing</span>
       <b>Why competitive</b><span>Everyday student problem, school-tested, clear beneficiary, bronze-level competitiveness.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-QJxr5pstWAI">
-    <h3>17. 2597 易時泊 Easy Park</h3>
+  <details class="video" id="v-QJxr5pstWAI"><summary><strong>17. 2597 易時泊 Easy Park</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=QJxr5pstWAI&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=QJxr5pstWAI&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -530,10 +461,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Likely sensing/app parking aid</span>
       <b>Why competitive</b><span>Urban parking is proven competitive (cf. Gold winner); needs distinct angle.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-MjjSazC5I1E">
-    <h3>18. 2600 智識食 AI Dietary Consultant</h3>
+  <details class="video" id="v-MjjSazC5I1E"><summary><strong>18. 2600 智識食 AI Dietary Consultant</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=MjjSazC5I1E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=MjjSazC5I1E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：保良局莊啟程小學</p>
@@ -543,10 +474,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Mobile AI dietary advisory app</span>
       <b>Why competitive</b><span>Chronic/elder nutrition need; app+research can work if paired with validation.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-S_mbrUUdixU">
-    <h3>19. 2609 環環相救 VibraC</h3>
+  <details class="video" id="v-S_mbrUUdixU"><summary><strong>19. 2609 環環相救 VibraC</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=S_mbrUUdixU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=S_mbrUUdixU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -556,10 +487,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Vibration signalling / wearable alert</span>
       <b>Why competitive</b><span>Accessibility &amp; emergency signalling can compete with clear user tests.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-1wk9N5glQbo">
-    <h3>20. 2620 保寶媬 See See Care</h3>
+  <details class="video" id="v-1wk9N5glQbo"><summary><strong>20. 2620 保寶媬 See See Care</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=1wk9N5glQbo&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=1wk9N5glQbo&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -569,10 +500,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Monitoring/alert care device or app</span>
       <b>Why competitive</b><span>Family caregiving need; keep privacy &amp; safety evidence strong.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-MijDqyg5vVw">
-    <h3>21. 2628 高智能雨傘 High-tech Smart Umbrella</h3>
+  <details class="video" id="v-MijDqyg5vVw"><summary><strong>21. 2628 高智能雨傘 High-tech Smart Umbrella</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=MijDqyg5vVw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=MijDqyg5vVw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：慈航學校</p>
@@ -582,10 +513,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Umbrella-embedded sensors/alerts</span>
       <b>Why competitive</b><span>Fun creative object—must prove a real problem (e.g. elderly safety) beyond gimmick.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-PM940s0uAak">
-    <h3>22. 2635 百淨號 Easy Scrubber</h3>
+  <details class="video" id="v-PM940s0uAak"><summary><strong>22. 2635 百淨號 Easy Scrubber</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=PM940s0uAak&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=PM940s0uAak&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -595,10 +526,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Mechanical/electronic cleaning aid</span>
       <b>Why competitive</b><span>Elder/occupation beneficiaries if ergonomics validated.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-4f9N48IAlIE">
-    <h3>23. 2665 漁夫寶 AIoT HK Marine farming</h3>
+  <details class="video" id="v-4f9N48IAlIE"><summary><strong>23. 2665 漁夫寶 AIoT HK Marine farming</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=4f9N48IAlIE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=4f9N48IAlIE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：軒尼詩道官立小學（銅鑼灣）</p>
@@ -608,10 +539,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>AIoT environmental/farming sensors</span>
       <b>Why competitive</b><span>Local industry + sustainability; stronger if field data shown.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-ETQHia3qnBU">
-    <h3>24. 2668 玩轉坐姿——腳踏實地 iSitWell</h3>
+  <details class="video" id="v-ETQHia3qnBU"><summary><strong>24. 2668 玩轉坐姿——腳踏實地 iSitWell</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=ETQHia3qnBU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=ETQHia3qnBU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：保良局世德小學</p>
@@ -621,10 +552,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Sitting-posture sensing + corrective app/game</span>
       <b>Why competitive</b><span>School-relevant; children beneficiary; game/controller skills map well if hardware included.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-7dwsB6OYc4E">
-    <h3>25. 2675 【連連】有餘 AI廚餘回收小助手</h3>
+  <details class="video" id="v-7dwsB6OYc4E"><summary><strong>25. 2675 【連連】有餘 AI廚餘回收小助手</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=7dwsB6OYc4E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=7dwsB6OYc4E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -634,10 +565,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>AI classification + recycling guidance</span>
       <b>Why competitive</b><span>HK food-waste policy relevance; pair with prototype bin/scale.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-6vtUzNo6dsw">
-    <h3>26. 2728 司機救星 Driver’s Savior</h3>
+  <details class="video" id="v-6vtUzNo6dsw"><summary><strong>26. 2728 司機救星 Driver’s Savior</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=6vtUzNo6dsw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=6vtUzNo6dsw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -647,10 +578,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>In-vehicle sensing/alerts</span>
       <b>Why competitive</b><span>Occupation beneficiary (drivers); OSH-aligned themes are competitive.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-20Ntte2uJiU">
-    <h3>27. 2781 智能驅動輪椅 AI Powered Wheelchair</h3>
+  <details class="video" id="v-20Ntte2uJiU"><summary><strong>27. 2781 智能驅動輪椅 AI Powered Wheelchair</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=20Ntte2uJiU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=20Ntte2uJiU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -660,10 +591,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Teachable Machine AI + motorised wheelchair prototype</span>
       <b>Why competitive</b><span>Empowering disability independence; vivid demo; strong creativity+benefits.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-oxQpTXRzqrg">
-    <h3>28. 2788 逃生導航 Smart Fire Escape Advisor</h3>
+  <details class="video" id="v-oxQpTXRzqrg"><summary><strong>28. 2788 逃生導航 Smart Fire Escape Advisor</strong></summary>
+    
     <span class="badge tx">transcript</span><span class="badge press">press</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=oxQpTXRzqrg&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=oxQpTXRzqrg&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：基督教宣道會徐澤林紀念小學</p>
@@ -673,10 +604,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>IoT sensors, LED guidance, tablet UI, 3D prototyping</span>
       <b>Why competitive</b><span>Timely HK community pain point (fire safety), multi-stakeholder design, strong problem+benefits+presentation story.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-MlPxvVTPZ2U">
-    <h3>29. 2795 守護者智能單車外套 i-Safe Cycling Jacket</h3>
+  <details class="video" id="v-MlPxvVTPZ2U"><summary><strong>29. 2795 守護者智能單車外套 i-Safe Cycling Jacket</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=MlPxvVTPZ2U&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=MlPxvVTPZ2U&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：彩雲聖若瑟小學</p>
@@ -686,10 +617,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Wearable sensors + visibility alerts</span>
       <b>Why competitive</b><span>Road safety beneficiary; wearable prototype is judge-friendly.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-gxPsO5eh8hM">
-    <h3>30. 2836 智能滅蟑器 AI Cockroaches Killer</h3>
+  <details class="video" id="v-gxPsO5eh8hM"><summary><strong>30. 2836 智能滅蟑器 AI Cockroaches Killer</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=gxPsO5eh8hM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=gxPsO5eh8hM&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：中華基督教青年會小學</p>
@@ -699,10 +630,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>AI vision + actuated sprayer</span>
       <b>Why competitive</b><span>Relatable home problem; safety-for-pets angle; careful ethics/safety demo needed.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-bWEtwFiZg-s">
-    <h3>31. 2844 綠識回收小助手 RecycleGPT</h3>
+  <details class="video" id="v-bWEtwFiZg-s"><summary><strong>31. 2844 綠識回收小助手 RecycleGPT</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=bWEtwFiZg-s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=bWEtwFiZg-s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：香港道教聯合會雲泉學校</p>
@@ -712,10 +643,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>AI object recognition + micro:bit Maqueen robot</span>
       <b>Why competitive</b><span>Combines AI with tangible robot demo; micro:bit-friendly; clear environmental benefit.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-45CARxfZAzQ">
-    <h3>32. 2883 安心聲路・避焰通 SafeRoute+ BlazeAlert</h3>
+  <details class="video" id="v-45CARxfZAzQ"><summary><strong>32. 2883 安心聲路・避焰通 SafeRoute+ BlazeAlert</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=45CARxfZAzQ&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=45CARxfZAzQ&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：德信學校</p>
@@ -725,10 +656,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Multi-sensors + audio/haptic escape guidance</span>
       <b>Why competitive</b><span>Inclusive fire safety; dual-mode design; disability+family beneficiaries.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-_1aPh5-BDJU">
-    <h3>33. 2941 慧眼淨居 Smart Eye Refresh</h3>
+  <details class="video" id="v-_1aPh5-BDJU"><summary><strong>33. 2941 慧眼淨居 Smart Eye Refresh</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=_1aPh5-BDJU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=_1aPh5-BDJU&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：佛教慈敬學校</p>
@@ -738,10 +669,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Air-quality/window sensing + elder-friendly alerts</span>
       <b>Why competitive</b><span>Gentle tech care for elders; clear smart-living fit.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-uO9ceJhnDus">
-    <h3>34. 2964 AI 智能發電回收箱</h3>
+  <details class="video" id="v-uO9ceJhnDus"><summary><strong>34. 2964 AI 智能發電回收箱</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=uO9ceJhnDus&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=uO9ceJhnDus&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：金巴崙長老會耀道小學</p>
@@ -751,10 +682,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Smart bin + energy harvesting + AI sorting cues</span>
       <b>Why competitive</b><span>Dual sustainability story; needs credible energy numbers.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-Jj-qRZSCxBw">
-    <h3>35. 2980 智慧洗澡開關助手</h3>
+  <details class="video" id="v-Jj-qRZSCxBw"><summary><strong>35. 2980 智慧洗澡開關助手</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=Jj-qRZSCxBw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=Jj-qRZSCxBw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -764,10 +695,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Assistive shower control hardware</span>
       <b>Why competitive</b><span>High-risk daily activity (bathroom falls); strong benefits if prototyped safely.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-2MkhKv9su4s">
-    <h3>36. 2995 弱樹臨風警報器 TreeWatch</h3>
+  <details class="video" id="v-2MkhKv9su4s"><summary><strong>36. 2995 弱樹臨風警報器 TreeWatch</strong></summary>
+    
     <span class="badge no">title/desc</span><span class="badge press">press</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=2MkhKv9su4s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=2MkhKv9su4s&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：拔萃男書院附屬小學</p>
@@ -777,10 +708,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Environmental/tilt/wind sensing + alert logic (prototype)</span>
       <b>Why competitive</b><span>Visible public-safety need in typhoon-prone HK; strong public appeal.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-QmWwXEItYbQ">
-    <h3>37. 3009 轉線易 Change lanes indicator</h3>
+  <details class="video" id="v-QmWwXEItYbQ"><summary><strong>37. 3009 轉線易 Change lanes indicator</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=QmWwXEItYbQ&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=QmWwXEItYbQ&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：仁濟醫院羅陳楚思小學</p>
@@ -790,10 +721,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Rear-distance sensing + driver feedback</span>
       <b>Why competitive</b><span>Personal family pain point story; road-safety benefits; keep scope realistic for primary.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-dVWdBaQvG1E">
-    <h3>38. 3020 熱感守護衣 HeatGuard Vest</h3>
+  <details class="video" id="v-dVWdBaQvG1E"><summary><strong>38. 3020 熱感守護衣 HeatGuard Vest</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=dVWdBaQvG1E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=dVWdBaQvG1E&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -803,10 +734,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Wearable temp/heat sensors + alerts</span>
       <b>Why competitive</b><span>Heat stress is a HK OSH issue; occupation/elder beneficiaries.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-_FwODVwMb08">
-    <h3>39. 3027 智慧單車安全伴行系統</h3>
+  <details class="video" id="v-_FwODVwMb08"><summary><strong>39. 3027 智慧單車安全伴行系統</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=_FwODVwMb08&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=_FwODVwMb08&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：東華三院王余家潔紀念小學</p>
@@ -816,10 +747,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Bike-mounted sensing + companion alerts</span>
       <b>Why competitive</b><span>Active transport safety; tangible on-bike prototype.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-2Ob97PavnMw">
-    <h3>40. 3037 再別康橋 HealthBridge</h3>
+  <details class="video" id="v-2Ob97PavnMw"><summary><strong>40. 3037 再別康橋 HealthBridge</strong></summary>
+    
     <span class="badge tx">transcript</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=2Ob97PavnMw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=2Ob97PavnMw&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：瑪利諾修院學校（小學部）</p>
@@ -829,10 +760,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Mobile mental-wellbeing app</span>
       <b>Why competitive</b><span>Student mental health need; for HKSF, add hardware/prototype + research beyond pure app.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-X-X4ugs9dV4">
-    <h3>41. 3052 易拾杖 Easy Pick</h3>
+  <details class="video" id="v-X-X4ugs9dV4"><summary><strong>41. 3052 易拾杖 Easy Pick</strong></summary>
+    
     <span class="badge no">title/desc</span><span class="badge press">press</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=X-X4ugs9dV4&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=X-X4ugs9dV4&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     <p class="small muted">School / 學校：保良局黃永樹小學</p>
@@ -842,10 +773,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Assistive cane + picker mechanism</span>
       <b>Why competitive</b><span>Simple, testable, elder-centred; strong benefits + design validation path.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-Ywqz45wh9JE">
-    <h3>42. 3091 防火法蜥 Fire-rescue salamander</h3>
+  <details class="video" id="v-Ywqz45wh9JE"><summary><strong>42. 3091 防火法蜥 Fire-rescue salamander</strong></summary>
+    
     <span class="badge no">title/desc</span><span class="badge press">press</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=Ywqz45wh9JE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=Ywqz45wh9JE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -855,10 +786,10 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Climbing robot + multi-sensors + AI vision</span>
       <b>Why competitive</b><span>Inspired by real fire tragedies; dramatic demo + firefighter-relevant use case.</span>
     </div>
-  </article>
+  </details>
 
-  <article class="video" id="v-3OxL1dCdyjE">
-    <h3>43. 3141 全聲導 Sound &amp; Safe</h3>
+  <details class="video" id="v-3OxL1dCdyjE"><summary><strong>43. 3141 全聲導 Sound &amp; Safe</strong></summary>
+    
     <span class="badge no">title/desc</span>
     <p class="small"><a href="https://www.youtube.com/watch?v=3OxL1dCdyjE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt">https://www.youtube.com/watch?v=3OxL1dCdyjE&amp;list=PLL3Rk8f0hg23S7Liwv8ALsLsicrf0xmDt</a></p>
     
@@ -868,14 +799,18 @@ summary{cursor:pointer;color:var(--accent);font-weight:600}
       <b>Tech</b><span>Audio guidance / sonic navigation</span>
       <b>Why competitive</b><span>Inclusive safety; pair with prototype + user trials.</span>
     </div>
-  </article>
+  </details>
 
   <hr style="border:none;border-top:1px solid var(--line);margin:1.4rem 0"/>
   <p class="small muted">字幕擷取說明：雲端環境遭 YouTube bot／登入牆限制。成功取得可用字幕／逐字稿 <b>20</b> 支；其餘 <b>23</b> 支改以雙語標題、影片簡介（學校）及公開新聞綜合。EcoDefender 僅取得錯誤語種自動字幕，故亦標為 title/desc。建議老師若本機可開字幕，可再核對標記為 title/desc 的條目。</p>
 </section>
-<footer>
-  <p>內部研究簡報 · 供 ELCHK LUAC 選題使用 · 離線可開啟本 HTML · Playlist processed: 43 · Generated for HKSF 2026–2027 planning.</p>
-</footer>
+      </div>
+    </main>
+    <footer class="colophon">
+      <div class="wrap">資料來源：YouTube 小學組短片播放清單與公開報道。建議題目僅供校內選題，提交前請對照官方指南。</div>
+    </footer>
+  </div>
 </div>
+<script src="site.js"></script>
 </body>
 </html>

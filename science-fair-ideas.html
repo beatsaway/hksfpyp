@@ -8,101 +8,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,480;0,6..72,620;1,6..72,480&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 <style>
-  :root {
-    --paper: #f4efe6;
-    --paper-2: #fffdf9;
-    --ink: #1b1914;
-    --muted: #5c564c;
-    --faint: #8a8174;
-    --line: #e3d9c8;
-    --line-strong: #cfc3ae;
-    --forest: #142420;
-    --forest-2: #1d3530;
-    --gold: #8a5a10;
-    --gold-bg: #f6e6c6;
-    --silver: #3d4a57;
-    --silver-bg: #e6ebf1;
-    --bronze: #7a3e22;
-    --bronze-bg: #f4ddd3;
-    --pop: #0e5c54;
-    --pop-bg: #d7eeea;
-    --ember: #b8431f;
-    --ember-bg: #fde8df;
-    --good: #1d6a42;
-    --shadow: 0 18px 40px rgba(28, 24, 16, 0.06);
-    --serif: "Newsreader", "Iowan Old Style", Palatino, Georgia, serif;
-    --sans: "Outfit", "Avenir Next", "Segoe UI", sans-serif;
-  }
 
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--sans);
-    font-size: 17px;
-    line-height: 1.55;
-    font-weight: 420;
-  }
-  img { max-width: 100%; }
-  a { color: var(--pop); }
-  a:hover { color: var(--ember); }
-  :focus-visible {
-    outline: 2px solid var(--ember);
-    outline-offset: 3px;
-  }
+  /* page-specific (shell layout lives in site.css) */
+  body { /* shell owns body */ }
+  .hero, nav.bar { display: none !important; }
+  .wrap { max-width: 920px; margin: 0 auto; }
+  /* main padding from site.css */
+  section { margin: 0 0 1.1rem; scroll-margin-top: 1.2rem; background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); padding: 1.2rem 1.25rem 1.35rem; }
+  .colophon { padding: 0 1.4rem 2.4rem; }
 
-  .skip {
-    position: absolute;
-    left: 1rem;
-    top: -4rem;
-    background: white;
-    padding: 0.5rem 0.8rem;
-    z-index: 20;
-  }
-  .skip:focus { top: 1rem; }
-
-  .hero {
-    background:
-      radial-gradient(900px 420px at 90% -10%, rgba(232, 168, 92, 0.22), transparent 60%),
-      linear-gradient(165deg, var(--forest) 0%, #1a3330 55%, #243f38 100%);
-    color: #f6f1e7;
-    padding: 2.2rem 1.4rem 3.2rem;
-  }
-  .wrap { max-width: 1080px; margin: 0 auto; }
-  .eyebrow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-    align-items: center;
-    font-size: 0.78rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: #d7c4a2;
-    margin: 0 0 1.2rem;
-  }
-  .eyebrow span { opacity: 0.7; }
-  h1 {
-    font-family: var(--serif);
-    font-weight: 480;
-    font-size: clamp(2.3rem, 5vw, 4.15rem);
-    line-height: 1.02;
-    letter-spacing: -0.02em;
-    margin: 0 0 1rem;
-    max-width: 16ch;
-  }
-  .deck {
-    max-width: 42rem;
-    font-size: 1.12rem;
-    line-height: 1.5;
-    color: #efe6d6;
-    margin: 0 0 1.6rem;
-  }
-  .deck em { font-family: var(--serif); font-style: italic; color: #fff; }
-
-  .remember {
+.remember {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.7rem;
@@ -126,30 +43,10 @@
   }
   .remember span { display: block; color: #e7dcc8; font-size: 0.92rem; line-height: 1.35; }
 
-  nav.bar {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: rgba(244, 239, 230, 0.92);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--line);
-  }
-  nav.bar .wrap {
-    display: flex;
-    gap: 0.4rem 1.1rem;
-    flex-wrap: wrap;
-    padding: 0.75rem 0;
-  }
-  nav.bar a {
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 0.92rem;
-    font-weight: 560;
-  }
-  nav.bar a:hover { color: var(--ember); }
+  
 
-  main { padding: 2.4rem 1.4rem 4rem; }
-  section { margin: 0 0 3.4rem; scroll-margin-top: 4.2rem; }
+  
+  
   h2 {
     font-family: var(--serif);
     font-weight: 480;
@@ -379,18 +276,79 @@
     .hero { background: white; color: black; padding: 0; }
     .deck, .remember span, .eyebrow { color: black; }
     nav.bar, .filters { display: none; }
-    body { background: white; font-size: 12pt; }
+    
     .card, .idea, .callout, .path, .lane { box-shadow: none; break-inside: avoid; }
     a { color: black; text-decoration: none; }
   }
+
+  .page-hero .remember {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.7rem;
+    margin: 1.4rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  @media (max-width: 900px) {
+    .page-hero .remember { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .page-hero .remember { grid-template-columns: 1fr; }
+  }
+  .page-hero .remember li {
+    background: rgba(255, 252, 246, 0.06);
+    border: 1px solid rgba(246, 232, 206, 0.16);
+    border-radius: 14px;
+    padding: 0.85rem;
+  }
+  .page-hero .remember strong {
+    display: block;
+    font-family: var(--serif);
+    font-weight: 620;
+    font-size: 1.35rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.25rem;
+  }
+  .page-hero .remember span { display: block; color: #e7dcc8; font-size: 0.92rem; line-height: 1.35; }
 </style>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
-
-<header class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Hong Kong Innovation Foundation · Science Fair <span>Briefing for 2026–27</span></p>
+<div class="backdrop" data-nav-backdrop></div>
+<div class="app">
+  <aside class="sidebar" id="site-nav" aria-label="Site navigation">
+    <a class="brand-block" href="index.html">
+      <p class="brand-kicker">HKSF 2026–27 · Primary</p>
+      <p class="brand-title">ELCHK LUAC Prep</p>
+      <p class="brand-school">基督教香港信義會呂祥光中學附屬小學</p>
+    </a>
+    <div class="nav-group" aria-label="Pages">
+      <p class="nav-label">Pages</p>
+      <a href="index.html">Home hub</a>
+      <a href="stage1-examples.html">Stage 1 examples</a>
+      <a href="science-fair-ideas.html" class="is-active" aria-current="page">Winners briefing</a>
+      <a href="hksf-playlist-ideas.html">Playlist briefing</a>
+    </div>
+    <div class="nav-group" aria-label="On this page">
+      <p class="nav-label">On this page</p>
+      <a class="sub" href="#essence">Essence</a>
+      <a class="sub" href="#winners">Winners</a>
+      <a class="sub" href="#fit">Our students</a>
+      <a class="sub" href="#criteria">Criteria</a>
+      <a class="sub" href="#ideas">Ideas</a>
+      <a class="sub" href="#path">How to build</a>
+      <a class="sub" href="#avoid">Leave these</a>
+    </div>
+    <p class="nav-note">Sections open in the main pane. Use Stage 1 examples for application copy.</p>
+  </aside>
+  <div class="content">
+    <div class="shell-top">
+      <button type="button" class="menu-btn" data-nav-toggle aria-controls="site-nav" aria-expanded="false">Menu</button>
+      <span class="page-label">Winners briefing</span>
+    </div>
+    <header class="page-hero">
+      <div class="wrap">
+<p class="eyebrow">Hong Kong Innovation Foundation · Science Fair <span>Briefing for 2026–27</span></p>
     <h1>Keep the signal small. Make the human action clear.</h1>
     <p class="deck">The primary winners of the Fifth Hong Kong Science Fair each took a problem people in Hong Kong already feel, read it with a simple board, and turned the reading into something a person <em>does</em>: pay, play, look up, or move. This page is for teams who are strong at interface design and who can vibe-code apps and games on micro:bit and Arduino.</p>
     <ol class="remember">
@@ -401,25 +359,12 @@
       <li><strong>05</strong><span>Bring three versions, each changed by a test.</span></li>
     </ol>
   </div>
-</header>
-
-<nav class="bar" aria-label="On this page">
-  <div class="wrap">
-    <a href="index.html">All pages</a>
-    <a href="#essence">Essence</a>
-    <a href="#winners">Winners</a>
-    <a href="#fit">Our students</a>
-    <a href="#criteria">Criteria</a>
-    <a href="#ideas">Ideas</a>
-    <a href="#path">How to build</a>
-    <a href="#avoid">Leave these</a>
-  </div>
-</nav>
-
-<main id="content">
-  <div class="wrap">
-
-    <section id="essence">
+        <p style="margin:1rem 0 0;font-size:.92rem;color:#d7c4a2">Also see: <a href="stage1-examples.html" style="color:#fff">Stage 1 form examples</a> · <a href="hksf-playlist-ideas.html" style="color:#fff">Playlist briefing</a></p>
+      </div>
+    </header>
+    <main class="main" id="content">
+      <div class="wrap">
+<section id="essence">
       <p class="kicker">The pattern</p>
       <h2>What the winning ideas have in common</h2>
       <p class="lede">The hardware lists differ. The shape of the work does not. A judge can retell each project in one breath, and a visitor at the HKCEC booth can see what to do.</p>
@@ -1006,11 +951,10 @@
         </article>
       </div>
     </section>
+      </div>
+    </main>
+    <footer class="colophon">
 
-  </div>
-</main>
-
-<footer class="colophon">
   <div class="wrap">
     <p><strong>Sources.</strong> Project descriptions for Park &amp; Easy Toll, Grip the Health, Schoolbag Monitor, and TreeWatch follow the notes supplied for this briefing. Award weights follow the Hong Kong Science Fair 2026–27 criteria supplied with those notes. The Most Popular Award for TreeWatch, and the public account of the gold team’s street origin, interviews, NFC backup, and three prototypes, are from coverage of the Fifth Hong Kong Science Fair.</p>
     <ol>
@@ -1022,8 +966,10 @@
     </ol>
     <p>Suggested projects are starting points for school teams. They are not entered work. Check the year’s official guide for page limits, division eligibility, and dates before you submit.</p>
   </div>
-</footer>
 
+    </footer>
+  </div>
+</div>
 <script>
   (function () {
     var buttons = document.querySelectorAll(".filters button");
@@ -1041,5 +987,6 @@
     });
   })();
 </script>
+<script src="site.js"></script>
 </body>
 </html>
