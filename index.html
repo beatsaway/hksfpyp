@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,480;0,6..72,620;1,6..72,480&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 </head>
-<body class="nav-collapsed">
+<body class="nav-collapsed" data-nav-force-collapsed>
 <a class="skip" href="#content">Skip to content</a>
 <div class="backdrop" data-nav-backdrop hidden></div>
 <div class="app">
@@ -36,11 +36,6 @@
         <a href="stage1-draft.html">Stage 1 template</a>
         <a href="science-fair-ideas.html">Last year · winners</a>
         <a href="hksf-playlist-ideas.html">Last year · playlist</a>
-      </div>
-      <div class="nav-group" aria-label="On this page">
-        <p class="nav-label">On this page</p>
-        <a class="sub" href="#pitch">About</a>
-        <a class="sub" href="#interest">Express interest</a>
       </div>
     </div>
   </aside>
@@ -76,8 +71,7 @@
           <p class="kicker">Next step</p>
           <h2>Express interest by 21 November</h2>
           <p>If you would like your child to take part, please fill in the interest form by <b>21 November</b>.</p>
-          <!-- GOOGLE_FORM_URL: replace href="#" with the real Google Form link when available -->
-          <p style="margin-top:0.85rem"><a href="#" id="google-form-link">Google Form</a> <span class="muted">(link to be added)</span></p>
+          <p style="margin-top:0.85rem"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf3X0oQTYNvXZouYluDjiJUbPRrxqZ2Aa_9uW12OhGdk__PGA/viewform" id="google-form-link" target="_blank" rel="noopener noreferrer">Interest form</a></p>
         </section>
       </div>
     </main>

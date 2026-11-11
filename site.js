@@ -57,21 +57,11 @@
     setCollapsed(!body.classList.contains("nav-collapsed"));
   }
 
-  // Default collapsed; remember last state only when already stored.
-  // Pages with data-nav-force-collapsed always start collapsed (ignore expand preference).
+  // Always start collapsed sitewide. Clear sticky expanded preference so first
+  // paint stays hidden even if a prior visit left localStorage at "0".
   try {
-    if (!isMobile()) {
-      if (body.hasAttribute("data-nav-force-collapsed")) {
-        body.classList.add("nav-collapsed");
-      } else {
-        var stored = localStorage.getItem(storageKey);
-        if (stored === "0") {
-          body.classList.remove("nav-collapsed");
-        } else {
-          body.classList.add("nav-collapsed");
-        }
-      }
-    }
+    localStorage.setItem(storageKey, "1");
+    if (!isMobile()) body.classList.add("nav-collapsed");
   } catch (err) {
     if (!isMobile()) body.classList.add("nav-collapsed");
   }
