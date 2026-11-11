@@ -58,13 +58,18 @@
   }
 
   // Default collapsed; remember last state only when already stored.
+  // Pages with data-nav-force-collapsed always start collapsed (ignore expand preference).
   try {
     if (!isMobile()) {
-      var stored = localStorage.getItem(storageKey);
-      if (stored === "0") {
-        body.classList.remove("nav-collapsed");
-      } else {
+      if (body.hasAttribute("data-nav-force-collapsed")) {
         body.classList.add("nav-collapsed");
+      } else {
+        var stored = localStorage.getItem(storageKey);
+        if (stored === "0") {
+          body.classList.remove("nav-collapsed");
+        } else {
+          body.classList.add("nav-collapsed");
+        }
       }
     }
   } catch (err) {
