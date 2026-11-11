@@ -57,11 +57,19 @@
     setCollapsed(!body.classList.contains("nav-collapsed"));
   }
 
+  // Default collapsed; remember last state only when already stored.
   try {
-    if (!isMobile() && localStorage.getItem(storageKey) === "1") {
-      body.classList.add("nav-collapsed");
+    if (!isMobile()) {
+      var stored = localStorage.getItem(storageKey);
+      if (stored === "0") {
+        body.classList.remove("nav-collapsed");
+      } else {
+        body.classList.add("nav-collapsed");
+      }
     }
-  } catch (err) {}
+  } catch (err) {
+    if (!isMobile()) body.classList.add("nav-collapsed");
+  }
 
   toggles.forEach(function (btn) {
     btn.addEventListener("click", toggleNav);
