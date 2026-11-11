@@ -9,21 +9,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,480;0,6..72,620;1,6..72,480&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <style>
-.rec{border:1px solid var(--line);border-radius:12px;padding:1rem;margin:.8rem 0;background:linear-gradient(180deg,#fffefb,#f3f8f8)}
-.rec h3{margin-top:0;color:var(--pop)}
-.verdict{background:#12363a;color:#f4fffd;border-radius:14px;padding:1rem 1.1rem;margin:.8rem 0}
-.verdict h3{color:#9de0d8;margin-top:0}
+.rec{border:none;border-radius:0;padding:.35rem 0;margin:.85rem 0;background:transparent}
+.rec h3{margin-top:0;color:var(--ink)}
+.verdict{background:transparent;color:var(--ink);border-radius:0;padding:.35rem 0;margin:.85rem 0}
+.verdict h3{color:var(--ink);margin-top:0}
 .grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:1rem}
 @media(max-width:800px){.grid-2{grid-template-columns:1fr}}
-.badge{display:inline-block;font-size:.75rem;padding:.15rem .45rem;border-radius:6px;border:1px solid var(--line);margin-right:.35rem;background:#f0f6f6}
-.badge.tx{background:#e4f5ea;border-color:#b7dfc2;color:var(--good)}
-.badge.no{background:#fff4df;border-color:#efd29a;color:var(--warn)}
-.badge.press{background:#e8eefc;border-color:#c3d0f5;color:#27408b}
-.video{border:1px solid var(--line);border-radius:12px;padding:.55rem .85rem;margin:.55rem 0;background:var(--paper-2)}
-.video summary{cursor:pointer;color:var(--pop);font-weight:600;padding:.35rem 0}
-.video[open]{padding-bottom:.9rem}
+.badge{display:inline-block;font-size:.75rem;padding:0;border-radius:0;border:none;margin-right:.55rem;background:transparent;color:var(--muted)}
+.badge.tx,.badge.no,.badge.press{background:transparent;border:none;color:var(--muted)}
+.video{border:none;border-radius:0;padding:.35rem 0;margin:.55rem 0;background:transparent}
+.video summary{cursor:pointer;color:var(--ink);font-weight:600;padding:.25rem 0}
+.video[open]{padding-bottom:.5rem}
 .small{font-size:.88rem}
 .panel .kv{margin-top:.6rem}
+.panel,.callout,.okbox,.warnbox{background:transparent!important;border:none!important;box-shadow:none!important;border-radius:0!important}
 </style>
 </head>
 <body>
@@ -46,9 +45,9 @@
     </a>
     <div class="nav-group" aria-label="Pages">
       <p class="nav-label">Pages</p>
-      <a href="index.html">Home hub</a>
+      <a href="index.html">Home</a>
       <a href="stage1-examples.html">Stage 1 examples</a>
-      <a href="stage1-draft.html">Stage 1 draft</a>
+      <a href="stage1-draft.html">Stage 1 template</a>
       <a href="science-fair-ideas.html">Winners briefing</a>
       <a href="hksf-playlist-ideas.html" class="is-active" aria-current="page">Playlist briefing</a>
     </div>
@@ -81,7 +80,7 @@
           <span class="chip">Stage 1：29 Nov 2026</span>
           <span class="chip">Stage 2：28 Feb 2027</span>
         </div>
-        <p style="margin:1rem 0 0;font-size:.92rem;color:#d7c4a2"><a href="stage1-examples.html" style="color:#fff">Stage 1 examples</a> · <a href="science-fair-ideas.html" style="color:#fff">Winners briefing</a> · <a href="index.html" style="color:#fff">Home</a></p>
+        <p class="muted" style="margin:1rem 0 0;font-size:.92rem"><a href="stage1-examples.html">Stage 1 examples</a> · <a href="stage1-draft.html">Stage 1 template</a> · <a href="science-fair-ideas.html">Winners briefing</a></p>
       </div>
     </header>
     <main class="main" id="content">
@@ -215,7 +214,7 @@
 </section>
 <section class="panel" id="form">
   <h2>4. 申請表欄位提示｜Application-form field tips</h2>
-  <div class="callout"><strong>Stage 1 ≠ Stage 2。</strong> 此階段只要名稱、主題、受惠對象、靈感中英短文。完整 I/O／設計管線／驗證計劃屬 Stage 2。可直接複製改寫：<a href="stage1-examples.html">Stage 1 填表示例（六套）</a>。</div>
+  <div class="callout"><strong>Stage 1 ≠ Stage 2。</strong> 此階段只要名稱、主題、受惠對象、靈感中英短文。示例：<a href="stage1-examples.html">Stage 1 examples</a> · 填表：<a href="stage1-draft.html">Stage 1 template</a>。</div>
   <h3>中／英項目名稱 Project name</h3>
   <ul>
     <li>格式參考入圍作品：<b>中文名 + English name</b>（可含輕微雙關，但要一讀就懂受惠對象／功能）。</li>
