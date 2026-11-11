@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stage 1 申請表填寫示例｜ELCHK LUAC Primary</title>
-<meta name="description" content="Hong Kong Science Fair 2026–27 Stage 1 application fill-in examples for ELCHK LUAC Primary teams strong at games/apps with micro:bit as controller.">
+<title>Stage 1 申請表填寫示例｜HKSF 2026–27 · Primary</title>
+<meta name="description" content="Hong Kong Science Fair 2026–27 Stage 1 application fill-in examples for Primary teams strong at games/apps with micro:bit as controller.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,480;0,6..72,620;1,6..72,480&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
@@ -15,10 +15,18 @@
 <div class="backdrop" data-nav-backdrop hidden></div>
 <div class="app">
   <aside class="sidebar" id="site-nav" aria-label="Site navigation">
+    <div class="sidebar-chrome">
+      <button type="button" class="home-btn" data-nav-toggle aria-controls="site-nav" aria-expanded="true" title="Collapse left panel">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M12 3.2 3.8 10.2c-.3.25-.3.7 0 .95l.7.55c.25.2.6.2.85 0L12 5.95l6.65 5.75c.25.2.6.2.85 0l.7-.55c.3-.25.3-.7 0-.95L12 3.2Zm-6.2 9.3V19c0 .55.45 1 1 1h3.7v-4.2c0-.44.36-.8.8-.8h2.4c.44 0 .8.36.8.8V20h3.7c.55 0 1-.45 1-1v-6.5l-7.2-6.2-7.2 6.2Z"/>
+        </svg>
+        <span class="home-btn-label">Collapse navigation</span>
+      </button>
+    </div>
+    <div class="sidebar-scroll">
     <a class="brand-block" href="index.html">
-      <p class="brand-kicker">HKSF 2026–27 · Primary</p>
-      <p class="brand-title">ELCHK LUAC Prep</p>
-      <p class="brand-school">基督教香港信義會呂祥光中學附屬小學</p>
+      <p class="brand-kicker">Hong Kong Science Fair</p>
+      <p class="brand-title">HKSF 2026–27 · Primary</p>
     </a>
     <div class="nav-group" aria-label="Pages">
       <p class="nav-label">Pages</p>
@@ -40,12 +48,16 @@
       <a class="sub" href="#pack-6">6 · GripQuest</a>
       <a class="sub" href="#pick">How to pick</a>
     </div>
-    <p class="nav-note">Left panel = section navigation. Stage 1 is short framing only — not the full design pipeline.</p>
+    </div>
   </aside>
 
   <div class="content">
     <div class="shell-top">
-      <button type="button" class="menu-btn" data-nav-toggle aria-controls="site-nav" aria-expanded="false">Menu</button>
+      <button type="button" class="shell-home" data-nav-toggle aria-controls="site-nav" aria-expanded="false" title="Open left panel" aria-label="Open navigation">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M12 3.2 3.8 10.2c-.3.25-.3.7 0 .95l.7.55c.25.2.6.2.85 0L12 5.95l6.65 5.75c.25.2.6.2.85 0l.7-.55c.3-.25.3-.7 0-.95L12 3.2Zm-6.2 9.3V19c0 .55.45 1 1 1h3.7v-4.2c0-.44.36-.8.8-.8h2.4c.44 0 .8.36.8.8V20h3.7c.55 0 1-.45 1-1v-6.5l-7.2-6.2-7.2 6.2Z"/>
+        </svg>
+      </button>
       <span class="page-label">Stage 1 examples</span>
     </div>
 
@@ -238,14 +250,11 @@
 
     <footer class="colophon">
       <div class="wrap">
-        <p>Examples are fill-in starters for ELCHK LUAC Primary teams. Confirm field labels and limits against the official 2026–27 application form before submit. Judging weights: Problem 20%, Creativity 30%, Design &amp; Validation 20%, Benefits 20%, Presentation 10%.</p>
+        <p>Examples are fill-in starters for Primary teams. Confirm field labels and limits against the official 2026–27 application form before submit. Judging weights: Problem 20%, Creativity 30%, Design &amp; Validation 20%, Benefits 20%, Presentation 10%.</p>
       </div>
     </footer>
   </div>
 </div>
-<script>
-  document.querySelector("[data-nav-backdrop]").hidden = false;
-</script>
 <script src="site.js"></script>
 </body>
 </html>
