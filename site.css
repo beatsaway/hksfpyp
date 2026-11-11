@@ -179,6 +179,7 @@ body.nav-collapsed .sidebar-chrome {
   text-transform: uppercase;
   color: var(--faint);
 }
+.nav-label.nav-label-later { margin-top: 1rem; }
 .nav-group a,
 .nav-group .nav-current {
   display: block;
@@ -471,6 +472,27 @@ th { background: transparent; font-weight: 650; }
   font-size: 0.85rem;
 }
 .colophon .wrap { max-width: 720px; margin: 0 auto; }
+
+.letter-body {
+  max-width: 40rem;
+}
+.letter-body p {
+  margin: 0.7rem 0;
+  line-height: 1.55;
+}
+.plain-letter {
+  margin: 0.65rem 0 0;
+  padding: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  max-width: 40rem;
+}
 
 /* Forms (Stage 1 template) */
 .field { margin: 0 0 1rem; }
