@@ -7,18 +7,11 @@
 <meta name="description" content="A teacher briefing on last year’s primary winners, and project directions for students who design interfaces and build apps and games with micro:bit and Arduino.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,480;0,6..72,620;1,6..72,480&family=Outfit:wght@420;560;680&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Outfit:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <style>
-
-  /* page-specific (shell layout lives in site.css) */
-  body { /* shell owns body */ }
-  .hero, nav.bar { display: none !important; }
-  .wrap { max-width: 720px; margin: 0 auto; }
-  section { margin: 0; scroll-margin-top: 1rem; background: transparent; border: none; border-radius: 0; box-shadow: none; padding: 0.85rem 0 1.35rem; }
-  .colophon { padding: 0 1.35rem 2.2rem; }
-
-.remember {
+  section { margin: 0; scroll-margin-top: 1rem; padding: 0.85rem 0 1.35rem; }
+  .remember, .page-hero .remember {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0.85rem;
@@ -26,29 +19,24 @@
     padding: 0;
     list-style: none;
   }
-  .remember li {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-  }
-  .remember strong {
+  .remember li, .page-hero .remember li { padding: 0; }
+  .remember strong, .page-hero .remember strong {
     display: block;
     font-family: var(--serif);
-    font-weight: 620;
+    font-weight: 600;
     font-size: 1.2rem;
     letter-spacing: -0.03em;
     margin-bottom: 0.2rem;
   }
-  .remember span { display: block; color: var(--muted); font-size: 0.9rem; line-height: 1.35; }
-
-  
-
-  
-  
+  .remember span, .page-hero .remember span {
+    display: block;
+    color: var(--muted);
+    font-size: 0.9rem;
+    line-height: 1.35;
+  }
   h2 {
     font-family: var(--serif);
-    font-weight: 480;
+    font-weight: 400;
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     letter-spacing: -0.02em;
     line-height: 1.1;
@@ -56,33 +44,14 @@
   }
   h3 {
     font-family: var(--serif);
-    font-weight: 620;
+    font-weight: 600;
     font-size: 1.45rem;
     letter-spacing: -0.02em;
     margin: 0 0 0.35rem;
     line-height: 1.15;
   }
   .lede { max-width: 44rem; color: var(--muted); margin: 0 0 1.3rem; font-size: 1.05rem; }
-  .kicker {
-    font-size: 0.72rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--faint);
-    font-weight: 680;
-    margin: 0 0 0.35rem;
-  }
-
-  .pattern {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 1rem;
-  }
-  .pattern article, .note, .card, .idea, .lane, .path {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
+  .pattern { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 1rem; }
   .steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.75rem; }
   .steps li {
     display: grid;
@@ -90,8 +59,6 @@
     gap: 0.8rem;
     align-items: start;
     padding: 0.35rem 0;
-    border-radius: 0;
-    background: transparent;
   }
   .num {
     font-family: var(--serif);
@@ -102,13 +69,8 @@
   }
   .steps strong { display: block; }
   .steps p { margin: 0.15rem 0 0; color: var(--muted); font-size: 0.95rem; }
-
-  .callout { padding: 1.2rem 1.25rem 1.3rem; }
-  .callout p:last-child { margin-bottom: 0; }
   .callout h3 { font-size: 1.55rem; }
-
   .winners { display: grid; gap: 0.9rem; }
-  .card { padding: 1.15rem 1.2rem 1.2rem; }
   .card-top {
     display: flex;
     justify-content: space-between;
@@ -119,19 +81,13 @@
   .award {
     flex: none;
     font-size: 0.75rem;
-    font-weight: 680;
+    font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    padding: 0.35rem 0.55rem;
-    border-radius: 999px;
+    padding: 0.35rem 0 0.35rem 0;
   }
-  .award.gold { background: var(--gold-bg); color: var(--gold); }
-  .award.silver { background: var(--silver-bg); color: var(--silver); }
-  .award.bronze { background: var(--bronze-bg); color: var(--bronze); }
-  .award.pop { background: var(--pop-bg); color: var(--pop); }
   .meta { color: var(--faint); font-size: 0.88rem; margin: 0.15rem 0 0; }
   .zh { font-family: var(--serif); font-style: italic; color: var(--muted); }
-
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem 1.2rem; margin-top: 0.8rem; }
   .label {
     display: block;
@@ -139,35 +95,18 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--faint);
-    font-weight: 680;
+    font-weight: 600;
     margin-bottom: 0.15rem;
   }
   .card p { margin: 0.35rem 0; }
-
   .split { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 1rem; }
   .fit ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
   .fit li { margin: 0.35rem 0; }
-  .warn {
-    background: var(--ember-bg);
-    border-radius: 14px;
-    padding: 0.9rem 1rem;
-    margin-top: 0.9rem;
-  }
-  .warn strong { color: var(--bronze); }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--paper-2);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    font-size: 0.95rem;
-  }
-  th, td { text-align: left; padding: 0.75rem 0.85rem; border-bottom: 1px solid var(--line); vertical-align: top; }
-  th { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 680; background: #faf6ef; }
+  .warn { padding: 0.9rem 0; margin-top: 0.9rem; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  th, td { text-align: left; padding: 0.75rem 0.25rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   td.numc, th.numc { text-align: right; font-variant-numeric: tabular-nums; }
-  tr.primary td { background: #f3faf6; }
   caption {
     text-align: left;
     font-family: var(--serif);
@@ -176,34 +115,24 @@
     caption-side: top;
   }
   .scroll { overflow-x: auto; }
-
   .bars { display: grid; gap: 0.55rem; margin: 1rem 0 0; }
   .bar-row { display: grid; grid-template-columns: 9.5rem 1fr auto; gap: 0.6rem; align-items: center; font-size: 0.92rem; }
-  .track { height: 10px; background: #efe8dc; border-radius: 99px; overflow: hidden; }
-  .fill { display: block; height: 100%; background: var(--forest-2); border-radius: 99px; }
-  .fill.hot { background: var(--ember); }
+  .track { height: 10px; background: var(--line); overflow: hidden; }
+  .fill { display: block; height: 100%; background: var(--ink); }
   .pct { font-variant-numeric: tabular-nums; color: var(--muted); }
-
   .filters { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0 0 0.9rem; }
   .filters button {
     font: inherit;
     font-size: 0.92rem;
-    font-weight: 560;
-    border: 1px solid var(--line-strong);
+    font-weight: 600;
+    border: 0;
     background: transparent;
     color: var(--ink);
-    border-radius: 999px;
-    padding: 0.4rem 0.8rem;
+    padding: 0.4rem 0.8rem 0.4rem 0;
     cursor: pointer;
   }
-  .filters button[aria-pressed="true"] {
-    background: var(--forest);
-    color: #f6f1e7;
-    border-color: var(--forest);
-  }
-
+  .filters button[aria-pressed="true"] { text-decoration: underline; }
   .ideas { display: grid; gap: 0.9rem; }
-  .idea { padding: 1.15rem 1.2rem 1.25rem; }
   .idea[hidden] { display: none; }
   .idea-head {
     display: flex;
@@ -215,108 +144,41 @@
     font-family: var(--serif);
     font-size: 2rem;
     line-height: 0.9;
-    color: var(--ember);
+    color: var(--ink);
   }
   .tags { display: flex; flex-wrap: wrap; gap: 0.35rem; justify-content: flex-end; }
   .tag {
     font-size: 0.75rem;
-    font-weight: 680;
+    font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    background: #f3eee4;
     color: var(--muted);
-    border-radius: 999px;
-    padding: 0.28rem 0.5rem;
+    padding: 0.28rem 0.5rem 0.28rem 0;
   }
   .who { margin: 0.2rem 0 0.6rem; color: var(--muted); }
   .blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.7rem; }
-  .block {
-    background: #faf7f1;
-    border-radius: 12px;
-    padding: 0.75rem 0.8rem;
-  }
+  .block { padding: 0.75rem 0; }
   .block p { margin: 0; }
-  .judge {
-    margin-top: 0.7rem;
-    padding-top: 0.7rem;
-    border-top: 1px dashed var(--line-strong);
-  }
-
+  .judge { margin-top: 0.7rem; padding-top: 0.7rem; border-top: 1px dashed var(--line); }
   .path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.7rem; }
-  .path { padding: 1rem 1rem 1.05rem; box-shadow: none; }
-  .path .stepn {
-    font-family: var(--serif);
-    color: var(--ember);
-    font-size: 1.3rem;
-  }
-
+  .path .stepn { font-family: var(--serif); color: var(--ink); font-size: 1.3rem; }
   .lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
-  .lane { padding: 1rem 1.05rem; box-shadow: none; }
   .lane h3 { font-size: 1.2rem; }
-
-  footer.colophon {
-    border-top: 1px solid var(--line);
-    padding: 1.4rem;
-    color: var(--muted);
-    font-size: 0.92rem;
-  }
+  footer.colophon { padding: 1.4rem 1.35rem 2.2rem; color: var(--muted); font-size: 0.92rem; }
   footer.colophon .wrap p { margin: 0.35rem 0; }
   footer ol { margin: 0.4rem 0 0; padding-left: 1.2rem; }
-
-  @media (max-width: 1100px) {
-    .remember { grid-template-columns: repeat(3, 1fr); }
-  }
+  @media (max-width: 1100px) { .remember, .page-hero .remember { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 900px) {
-    .remember, .pattern, .split, .grid-2, .blocks, .path-grid, .lanes { grid-template-columns: 1fr; }
+    .remember, .page-hero .remember, .pattern, .split, .grid-2, .blocks, .path-grid, .lanes { grid-template-columns: 1fr; }
+    .page-hero .remember { grid-template-columns: 1fr 1fr; }
     .bar-row { grid-template-columns: 1fr; gap: 0.2rem; }
     h1 { max-width: none; }
   }
+  @media (max-width: 560px) { .page-hero .remember { grid-template-columns: 1fr; } }
   @media print {
-    .hero { background: white; color: black; padding: 0; }
-    .deck, .remember span, .eyebrow { color: black; }
-    nav.bar, .filters { display: none; }
-    
-    .card, .idea, .callout, .path, .lane { box-shadow: none; break-inside: avoid; }
+    .filters { display: none; }
     a { color: black; text-decoration: none; }
   }
-
-  .page-hero .remember {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0.85rem;
-    margin: 1.2rem 0 0;
-    padding: 0;
-    list-style: none;
-  }
-  @media (max-width: 900px) {
-    .page-hero .remember { grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 560px) {
-    .page-hero .remember { grid-template-columns: 1fr; }
-  }
-  .page-hero .remember li {
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-  }
-  .page-hero .remember strong {
-    display: block;
-    font-family: var(--serif);
-    font-weight: 620;
-    font-size: 1.2rem;
-    letter-spacing: -0.03em;
-    margin-bottom: 0.2rem;
-  }
-  .page-hero .remember span { display: block; color: var(--muted); font-size: 0.9rem; line-height: 1.35; }
-
-  th { background: transparent !important; }
-  tr.primary td { background: transparent !important; }
-  .track { background: var(--line) !important; border-radius: 0 !important; }
-  .filters button { border: none !important; border-radius: 0 !important; padding-left: 0 !important; }
-  .filters button[aria-pressed="true"] { background: transparent !important; color: var(--ink) !important; text-decoration: underline; }
-  .idea, .card, .lane, .path, .callout, .warn { background: transparent !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; }
-  .award { background: transparent !important; border-radius: 0 !important; padding-left: 0 !important; color: var(--ink) !important; }
 </style>
 </head>
 <body class="nav-collapsed" data-nav-force-collapsed>
@@ -337,15 +199,13 @@
       <p class="brand-kicker">This year’s Fair</p>
       <p class="brand-title">For parents</p>
     </a>
-    <div class="nav-group" aria-label="Pages">
-      <p class="nav-label">For parents</p>
-      <a href="index.html">Home</a>
-        <p class="nav-label nav-label-later">Later use</p>
-      <a href="stage1-examples.html">Stage 1 examples</a>
-      <a href="stage1-draft.html">Stage 1 template</a>
-      <a href="science-fair-ideas.html" class="is-active" aria-current="page">Last year · winners</a>
-      <a href="hksf-playlist-ideas.html">Last year · playlist</a>
-    </div>
+      <div class="nav-group" aria-label="Pages">
+        <a href="index.html">Home</a>
+        <a href="stage1-examples.html">Stage 1 examples</a>
+        <a href="stage1-draft.html">Stage 1 template</a>
+        <a href="science-fair-ideas.html" class="is-active" aria-current="page">Winners</a>
+        <a href="hksf-playlist-ideas.html">Playlist</a>
+      </div>
     <div class="nav-group" aria-label="On this page">
       <p class="nav-label">On this page</p>
       <a class="sub" href="#essence">Essence</a>
@@ -365,11 +225,11 @@
           <path fill="currentColor" d="M12 3.2 3.8 10.2c-.3.25-.3.7 0 .95l.7.55c.25.2.6.2.85 0L12 5.95l6.65 5.75c.25.2.6.2.85 0l.7-.55c.3-.25.3-.7 0-.95L12 3.2Zm-6.2 9.3V19c0 .55.45 1 1 1h3.7v-4.2c0-.44.36-.8.8-.8h2.4c.44 0 .8.36.8.8V20h3.7c.55 0 1-.45 1-1v-6.5l-7.2-6.2-7.2 6.2Z"/>
         </svg>
       </button>
-      <span class="page-label">Winners briefing</span>
+      <span class="page-label">Winners</span>
     </div>
     <header class="page-hero">
       <div class="wrap">
-        <p class="eyebrow">Last year · winners briefing <span>for 2026–27 teams</span></p>
+        <p class="eyebrow">Winners briefing · for 2026–27 teams</p>
         <h1>Keep the signal small. Make the human action clear.</h1>
         <p class="deck">The primary winners of last year’s Fair each took a problem people in Hong Kong already feel, read it with a simple board, and turned the reading into something a person <em>does</em>: pay, play, look up, or move. This page is for teams who are strong at interface design and who can vibe-code apps and games on micro:bit and Arduino.</p>
         <ol class="remember">
@@ -379,7 +239,6 @@
           <li><strong>04</strong><span>Show two approaches you tried, dropped, and can explain.</span></li>
           <li><strong>05</strong><span>Bring three versions, each changed by a test.</span></li>
         </ol>
-        <p class="muted" style="margin:1rem 0 0;font-size:.92rem"><a href="stage1-examples.html">Stage 1 examples</a> · <a href="stage1-draft.html">Stage 1 template</a> · <a href="hksf-playlist-ideas.html">Playlist briefing</a></p>
       </div>
     </header>
     <main class="main" id="content">
